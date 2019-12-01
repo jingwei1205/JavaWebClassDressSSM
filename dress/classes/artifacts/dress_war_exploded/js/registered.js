@@ -50,8 +50,8 @@ $(function() {
 		var gender = $("input[name='gender']:checked").val();
 		var xiangxi = $("input[name='xiangxi']").val();
 		var introduce = $("#introduce").text();
-		var test = $("input[name='test']").val();
-		$.post("Register",
+		//var test = $("input[name='test']").val();
+		$.post("regist",
 			"type=register" 
 			+ "&username=" + username
 			+ "&email=" + email
@@ -63,7 +63,7 @@ $(function() {
 			+ "&area=" + area
 			+ "&gender=" + gender
 			+ "&xiangxi=" + xiangxi
-			+ "&testnum=" + test
+			//+ "&testnum=" + test
 			+ "&introduce=" + introduce,
 			function(t){
 				if(t=="true"){
@@ -85,7 +85,7 @@ $(function() {
 		if(!InputTest().email()){
 			alert("邮箱不正确")
 		}else{
-			$.post("Register" ,"type=sendNum&email=" + email,function(t){
+			$.post("regist" ,"type=sendNum&email=" + email,function(t){
 				if(t == "true"){
 					$btn.next().html("<br /><font style='color:blue;'>验证码已发送到" + $("input[name='email']").val() + "，请在您的邮箱查看</font>");
 					$btn.attr("disabled","disabled");
@@ -111,7 +111,7 @@ $(function() {
 	// 注册按钮函数
 	function regisbtn(){
 		var t = InputTest();
-		if(t.username() && t.email() && t.name() && t.pwd() && t.againpwd() && t.telephone() && t.xiangxi() && t.test()){
+		if(t.username() && t.email() && t.name() && t.pwd() && t.againpwd() && t.telephone() && t.xiangxi() ){
 			$("button[name='reg']").removeAttr("disabled");
 		}else{
 			$("button[name='reg']").attr("disabled","disabled");
@@ -131,7 +131,7 @@ $(function() {
 				return false;
 			}else{
 				$.ajax({
-					url:"Register",
+					url:"regist",
 					type:"post",
 					data:"type=testUsername&username=" + val,
 					success:function(t){
@@ -226,7 +226,7 @@ $(function() {
 		}
 		obj.test = function() {
 			var val = $("input[name='test']").val();
-			$.post("Register","type=emailTestnum&testnum=" + val,function(data){
+			$.post("regist","type=emailTestnum&testnum=" + val,function(data){
 				if(data == "true"){
 					$("input[name='test']").parent().find("span").html("<font style='color:greenyellow;'>验证码正确</font>");
 				}else{
@@ -238,7 +238,9 @@ $(function() {
 				$("#sendtestnumbtn").text("已验证");
 				return true;
 			}else{
-				return false;
+				$("#sendtestnumbtn").attr("disabled","disabled")
+				$("#sendtestnumbtn").text("已验证");
+				return true;
 			}
 		}
 		return obj;

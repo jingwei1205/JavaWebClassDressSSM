@@ -26,10 +26,12 @@ import com.lifeng.util.Unicode;
 
 @Controller
 public class UserController {
+	//创建UserService对象
 	@Autowired
 	private UserService userService;
 
-	
+
+	//set get userService实体
 	public UserService getUserService() {
 		return userService;
 	}

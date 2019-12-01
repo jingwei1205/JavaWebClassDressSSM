@@ -135,6 +135,7 @@
 									个人简述
 								</div>
 								<textarea id="introduce" rows="5" cols="40">-</textarea>
+								<!--
 								<div class="col-sm-5 text-right">
 									<b>*</b> 验证码
 								</div>
@@ -142,6 +143,7 @@
 									<input type="text" name="test" id="emailinput" /><button id="sendtestnumbtn">发送验证码到邮箱</button>
 									<span></span>
 								</div>
+								!-->
 								<div class="col-sm-12 text-center">
 									注：带"*"为必填
 								</div>
