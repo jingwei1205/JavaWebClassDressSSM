@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="User" type="com.lifeng.entity.User"/>
+		<typeAlias alias="Dress" type="com.lifeng.entity.Dress"/>
+		<typeAlias alias="Comment" type="com.lifeng.entity.Comment"/>
+		<typeAlias alias="Order" type="com.lifeng.entity.Order"/>
+		<typeAlias alias="OrderItem" type="com.lifeng.entity.OrderItem"/>
+		
+		<typeAlias alias="Cart" type="com.lifeng.entity.Cart"/>
+	</typeAliases>	
+	<mappers>
+		<mapper resource="com/lifeng/dao/UserMapper.xml"/>	
+		<mapper resource="com/lifeng/dao/DressMapper.xml"/>	
+		<mapper resource="com/lifeng/dao/CommentMapper.xml"/>
+		
+		<mapper resource="com/lifeng/dao/CartMapper.xml"/>
+		<mapper resource="com/lifeng/dao/OrdersMapper.xml"/>			
+	</mappers>
+</configuration>
