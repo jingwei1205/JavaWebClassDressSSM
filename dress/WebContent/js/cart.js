@@ -1,5 +1,5 @@
 ﻿
-/*$(function(){
+$(function(){
 
 	// 减少书本数量事件
 	$(".remove").click(function(){
@@ -292,4 +292,4 @@
 				alert("减少失败");
 		});
 	}
-});*/
+});
