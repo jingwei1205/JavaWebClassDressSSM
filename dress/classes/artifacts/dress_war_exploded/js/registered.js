@@ -53,7 +53,7 @@ $(function() {
 		if (city==null)
 			var shippingAddress=province+area+xiangxi;
 		else{var shippingAddress=province+city+area+xiangxi;}
-		alert(shippingAddress);
+		//alert(shippingAddress);
 		//var test = $("input[nvame='test']").val();
 		$.post("regist",
 			"type=register" 
@@ -136,7 +136,7 @@ $(function() {
 				return false;
 			}else{
 				$.ajax({
-					url:"regist",
+					url:"checkUser",
 					type:"post",
 					data:"type=testUsername&username=" + val,
 					success:function(t){

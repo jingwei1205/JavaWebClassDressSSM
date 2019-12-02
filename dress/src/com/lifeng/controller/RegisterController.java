@@ -11,8 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.lifeng.dao.UserDao;
 import com.lifeng.service.RegisterService;
 import com.sun.deploy.net.HttpResponse;
+import com.sun.xml.internal.ws.resources.HttpserverMessages;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,8 +38,20 @@ public class RegisterController {
     @ResponseBody
     public String regist(HttpSession session, HttpServletResponse response, User user) {
         registerService.regist(user);
-        Map<String, Object> map = new HashMap<String, Object>();
-        String t="true";
-        return t;
+        return "true";
+    }
+
+    @RequestMapping("/checkUser")
+    @ResponseBody
+    public String checkUser(HttpSession session, HttpServletResponse response,String username) {
+        System.out.println(username+"\n");
+        User user=registerService.checkUser(username);
+        if(user==null){
+            return "true";
+        }
+        else {
+            System.out.println(user.getUsername()+"\n");
+            return "false";
+        }
     }
 }

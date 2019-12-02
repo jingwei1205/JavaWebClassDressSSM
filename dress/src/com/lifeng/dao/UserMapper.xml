@@ -4,5 +4,8 @@
 <mapper namespace="com.lifeng.dao.UserDao">
  	<select id="findUser"  parameterType="String"  resultType="User">
 		select * from user where username=#{0} and password=#{1}
- 	</select> 
+ 	</select>
+	<select id="whetherExist" parameterType="String" resultType="User">
+		select username from user where username=#{username}
+	</select>
 </mapper>

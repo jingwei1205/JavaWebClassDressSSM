@@ -10,11 +10,13 @@ import com.lifeng.entity.User;
 public class RegisterServiceImpl implements RegisterService{
     @Autowired
     private RegisterDao registerDao;
+    @Autowired
+    private UserDao userDao;
     public RegisterDao getRegisterDao() {
         return registerDao;
     }
 
-    public void setUserDao(RegisterDao registerDao) {
+    public void setRegisterDao(RegisterDao registerDao) {
         this.registerDao = registerDao;
     }
 
@@ -22,4 +24,10 @@ public class RegisterServiceImpl implements RegisterService{
     public void regist(User user) {
         registerDao.insertUser(user);
     }
+
+    @Override
+    public User checkUser(String username){
+        return userDao.whetherExist(username);
+    }
+
 }
