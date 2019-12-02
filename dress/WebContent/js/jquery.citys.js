@@ -38,12 +38,13 @@
         }
         var defaults = {
             dataUrl:'https://passer-by.com/data_location/list.json',     //数据库地址
+            //dataUrl:'json/addressnum',     //数据库地址
             crossDomain: true,        //是否开启跨域
             dataType:'json',          //数据库类型:'json'或'jsonp'
             provinceField:'province', //省份字段名
             cityField:'city',         //城市字段名
             areaField:'area',         //地区字段名
-            valueType:'code',         //下拉框值的类型,code行政区划代码,name地名
+            valueType:'name',         //下拉框值的类型,code行政区划代码,name地名
             code:0,                   //地区编码
             province:0,               //省份,可以为地区编码或者名称
             city:0,                   //城市,可以为地区编码或者名称

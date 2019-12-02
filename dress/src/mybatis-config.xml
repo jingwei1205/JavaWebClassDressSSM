@@ -15,7 +15,7 @@
 		<mapper resource="com/lifeng/dao/UserMapper.xml"/>	
 		<mapper resource="com/lifeng/dao/DressMapper.xml"/>	
 		<mapper resource="com/lifeng/dao/CommentMapper.xml"/>
-		
+		<mapper resource="com/lifeng/dao/RegisterMapper.xml"/>
 		<mapper resource="com/lifeng/dao/CartMapper.xml"/>
 		<mapper resource="com/lifeng/dao/OrdersMapper.xml"/>			
 	</mappers>

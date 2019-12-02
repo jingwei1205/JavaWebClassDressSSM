@@ -50,7 +50,11 @@ $(function() {
 		var gender = $("input[name='gender']:checked").val();
 		var xiangxi = $("input[name='xiangxi']").val();
 		var introduce = $("#introduce").text();
-		//var test = $("input[name='test']").val();
+		if (city==null)
+			var shippingAddress=province+area+xiangxi;
+		else{var shippingAddress=province+city+area+xiangxi;}
+		alert(shippingAddress);
+		//var test = $("input[nvame='test']").val();
 		$.post("regist",
 			"type=register" 
 			+ "&username=" + username
@@ -58,11 +62,12 @@ $(function() {
 			+ "&name=" + name
 			+ "&password=" + password1
 			+ "&telephone=" + telephone
-			+ "&province=" + province
-			+ "&city=" + city
-			+ "&area=" + area
+			+ "&shippingAddress=" + shippingAddress
+			//+ "&province=" + province
+			//+ "&city=" + city
+			//+ "&area=" + area
 			+ "&gender=" + gender
-			+ "&xiangxi=" + xiangxi
+			//+ "&xiangxi=" + xiangxi
 			//+ "&testnum=" + test
 			+ "&introduce=" + introduce,
 			function(t){

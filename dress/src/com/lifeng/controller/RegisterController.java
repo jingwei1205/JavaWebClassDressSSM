@@ -34,12 +34,10 @@ public class RegisterController {
 
     @RequestMapping("/regist")
     @ResponseBody
-    public void regist(HttpSession session, HttpServletResponse response,
-                         String username,String password,String gender,
-                         String email,String telephone,String introduce,
-                         String shippingAddress,String name){
-        registerService.regist(username,password,gender,email,telephone,introduce,shippingAddress,name);
-        System.out.println(username+"\t"+name+"\t"+password+"\t"+gender+"\n"+email+"\t"+telephone+"\t"
-        +introduce+"\t"+shippingAddress+"\t");
+    public String regist(HttpSession session, HttpServletResponse response, User user) {
+        registerService.regist(user);
+        Map<String, Object> map = new HashMap<String, Object>();
+        String t="true";
+        return t;
     }
 }

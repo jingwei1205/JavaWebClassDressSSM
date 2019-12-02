@@ -19,9 +19,7 @@ public class RegisterServiceImpl implements RegisterService{
     }
 
     @Override
-    public void regist(String username,String password,String gender,
-                       String email,String telephone,String introduce,
-                       String shippingAddress,String name) {
-        registerDao.insertUser(username, password,gender, email, telephone,introduce, shippingAddress,name);
+    public void regist(User user) {
+        registerDao.insertUser(user);
     }
 }
