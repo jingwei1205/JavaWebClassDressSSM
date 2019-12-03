@@ -264,9 +264,18 @@
 							<a class="username" href="user.jsp"><h3 id="index_username">${user.name }</h3></a>
 							<button type="button" class="btn btn-info loginBtn loginbutton">登录</button>
 							<a href="registered.jsp" class="btn btn-primary reBtn">注册</a>
+							<a href="admin.jsp" class="btn btn-primary adminBtn">管理</a>
+							<p class="roleType">${user.role}</p>
 							<script type="text/javascript">
+								var obj=$(".roleType");
+								var role=obj.text();
 								$(".loginbutton").hide();
 								$(".reBtn").hide();
+								if (role!="admin")
+								{
+									$(".adminBtn").hide();
+								}
+								obj.text("用户级别："+role);
 							</script>
 						</div>
 					</c:if>

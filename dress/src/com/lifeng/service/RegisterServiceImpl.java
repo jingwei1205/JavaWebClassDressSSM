@@ -12,6 +12,7 @@ public class RegisterServiceImpl implements RegisterService{
     private RegisterDao registerDao;
     @Autowired
     private UserDao userDao;
+
     public RegisterDao getRegisterDao() {
         return registerDao;
     }
@@ -30,4 +31,12 @@ public class RegisterServiceImpl implements RegisterService{
         return userDao.whetherExist(username);
     }
 
+    @Override
+    public int deleteUser(String username){return userDao.deleteUser(username);}
+
+    @Override
+    public User lookUserInName(String value){return  userDao.lookUserInName(value);}
+
+    @Override
+    public User lookUserInId(int value){return  userDao.lookUserInId(value);}
 }

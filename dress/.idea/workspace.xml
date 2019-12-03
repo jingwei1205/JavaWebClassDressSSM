@@ -7,13 +7,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05358dfc-3696-4a55-9b4c-28bdbc0f4fd9" name="Default Changelist" comment="add RegisterService">
-      <change afterPath="$PROJECT_DIR$/WebContent/img/miaosha.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/js/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/js/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/js/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/js/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/js/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/js/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/orders.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/dao/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/dao/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/service/RegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/service/RegisterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/service/RegisterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/service/RegisterServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/RegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/RegisterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/RegisterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/RegisterServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/js/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/js/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/orders.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/dao/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/dao/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/service/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/service/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/service/RegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/service/RegisterServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +288,12 @@
       <workItem from="1575276189438" duration="607000" />
       <workItem from="1575280524858" duration="10480000" />
       <workItem from="1575293336539" duration="5790000" />
-      <workItem from="1575303485961" duration="771000" />
+      <workItem from="1575303485961" duration="1125000" />
+      <workItem from="1575333261304" duration="32000" />
+      <workItem from="1575337245179" duration="774000" />
+      <workItem from="1575345894589" duration="5679000" />
+      <workItem from="1575359779816" duration="3365000" />
+      <workItem from="1575366046585" duration="16029000" />
     </task>
     <servers />
   </component>
@@ -281,14 +313,18 @@
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="452" y="111" key="#SQL_Dialects/0.40.1920.1040@0.40.1920.1040" timestamp="1575219314444" />
+    <state x="452" y="131" key="#Template_Data_Languages" timestamp="1575349285959">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="452" y="131" key="#Template_Data_Languages/0.40.1920.1040@0.40.1920.1040" timestamp="1575349285959" />
     <state x="452" y="132" key="#Updates" timestamp="1575209294142">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="452" y="132" key="#Updates/0.40.1920.1040@0.40.1920.1040" timestamp="1575209294142" />
-    <state x="414" y="204" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575303286909">
+    <state x="414" y="204" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575337925960">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state x="414" y="204" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1920.1040@0.40.1920.1040" timestamp="1575303286909" />
+    <state x="414" y="204" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1920.1040@0.40.1920.1040" timestamp="1575337925960" />
     <state x="627" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1575302132533">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
@@ -297,54 +333,54 @@
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="454" y="80" key="CommitChangelistDialog2/0.40.1920.1040@0.40.1920.1040" timestamp="1575211531622" />
-    <state width="1596" height="246" key="GridCell.Tab.0.bottom" timestamp="1575304266971">
+    <state width="983" height="189" key="GridCell.Tab.0.bottom" timestamp="1575382376099">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="246" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1575304266971" />
-    <state width="1596" height="246" key="GridCell.Tab.0.center" timestamp="1575304266971">
+    <state width="983" height="189" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1575382376099" />
+    <state width="983" height="189" key="GridCell.Tab.0.center" timestamp="1575382376098">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="246" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1575304266971" />
-    <state width="1596" height="246" key="GridCell.Tab.0.left" timestamp="1575304266971">
+    <state width="983" height="189" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1575382376098" />
+    <state width="983" height="189" key="GridCell.Tab.0.left" timestamp="1575382376098">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="246" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1575304266971" />
-    <state width="1596" height="246" key="GridCell.Tab.0.right" timestamp="1575304266971">
+    <state width="983" height="189" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1575382376098" />
+    <state width="983" height="189" key="GridCell.Tab.0.right" timestamp="1575382376099">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="246" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1575304266971" />
-    <state width="1596" height="246" key="GridCell.Tab.1.bottom" timestamp="1575304266727">
+    <state width="983" height="189" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1575382376099" />
+    <state width="983" height="189" key="GridCell.Tab.1.bottom" timestamp="1575382376099">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="246" key="GridCell.Tab.1.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1575304266727" />
-    <state width="1596" height="246" key="GridCell.Tab.1.center" timestamp="1575304266727">
+    <state width="983" height="189" key="GridCell.Tab.1.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1575382376099" />
+    <state width="983" height="189" key="GridCell.Tab.1.center" timestamp="1575382376099">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="246" key="GridCell.Tab.1.center/0.40.1920.1040@0.40.1920.1040" timestamp="1575304266727" />
-    <state width="1596" height="246" key="GridCell.Tab.1.left" timestamp="1575304266727">
+    <state width="983" height="189" key="GridCell.Tab.1.center/0.40.1920.1040@0.40.1920.1040" timestamp="1575382376099" />
+    <state width="983" height="189" key="GridCell.Tab.1.left" timestamp="1575382376099">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="246" key="GridCell.Tab.1.left/0.40.1920.1040@0.40.1920.1040" timestamp="1575304266727" />
-    <state width="1596" height="246" key="GridCell.Tab.1.right" timestamp="1575304266727">
+    <state width="983" height="189" key="GridCell.Tab.1.left/0.40.1920.1040@0.40.1920.1040" timestamp="1575382376099" />
+    <state width="983" height="189" key="GridCell.Tab.1.right" timestamp="1575382376099">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="246" key="GridCell.Tab.1.right/0.40.1920.1040@0.40.1920.1040" timestamp="1575304266727" />
-    <state width="1596" height="246" key="GridCell.Tab.2.bottom" timestamp="1575304266728">
+    <state width="983" height="189" key="GridCell.Tab.1.right/0.40.1920.1040@0.40.1920.1040" timestamp="1575382376099" />
+    <state width="983" height="189" key="GridCell.Tab.2.bottom" timestamp="1575382376100">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="246" key="GridCell.Tab.2.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1575304266728" />
-    <state width="1596" height="246" key="GridCell.Tab.2.center" timestamp="1575304266727">
+    <state width="983" height="189" key="GridCell.Tab.2.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1575382376100" />
+    <state width="983" height="189" key="GridCell.Tab.2.center" timestamp="1575382376100">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="246" key="GridCell.Tab.2.center/0.40.1920.1040@0.40.1920.1040" timestamp="1575304266727" />
-    <state width="1596" height="246" key="GridCell.Tab.2.left" timestamp="1575304266727">
+    <state width="983" height="189" key="GridCell.Tab.2.center/0.40.1920.1040@0.40.1920.1040" timestamp="1575382376100" />
+    <state width="983" height="189" key="GridCell.Tab.2.left" timestamp="1575382376099">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="246" key="GridCell.Tab.2.left/0.40.1920.1040@0.40.1920.1040" timestamp="1575304266727" />
-    <state width="1596" height="246" key="GridCell.Tab.2.right" timestamp="1575304266727">
+    <state width="983" height="189" key="GridCell.Tab.2.left/0.40.1920.1040@0.40.1920.1040" timestamp="1575382376099" />
+    <state width="983" height="189" key="GridCell.Tab.2.right" timestamp="1575382376100">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="246" key="GridCell.Tab.2.right/0.40.1920.1040@0.40.1920.1040" timestamp="1575304266727" />
+    <state width="983" height="189" key="GridCell.Tab.2.right/0.40.1920.1040@0.40.1920.1040" timestamp="1575382376100" />
     <state x="-566" y="188" key="SettingsEditor" timestamp="1575215366420">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
@@ -369,9 +405,13 @@
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="134" y="48" key="new project wizard/0.40.1920.1040@0.40.1920.1040" timestamp="1575202333343" />
-    <state x="532" y="35" width="840" height="1032" key="search.everywhere.popup" timestamp="1575201537713">
+    <state x="532" y="257" key="run.anything.popup" timestamp="1575369742260">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state x="532" y="35" width="840" height="1032" key="search.everywhere.popup/0.40.1920.1040@0.40.1920.1040" timestamp="1575201537713" />
+    <state x="532" y="257" key="run.anything.popup/0.40.1920.1040@0.40.1920.1040" timestamp="1575369742260" />
+    <state x="532" y="35" width="840" height="1032" key="search.everywhere.popup" timestamp="1575351092255">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="532" y="35" width="840" height="1032" key="search.everywhere.popup/0.40.1920.1040@0.40.1920.1040" timestamp="1575351092255" />
   </component>
 </project>

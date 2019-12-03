@@ -17,10 +17,10 @@
 	</head>
 
 	<body>
-		<c:if test="${empty sessionScope.user || empty requestScope.ordersnum || empty requestScope.cartnum}">
-			<jsp:forward page="User"></jsp:forward>
-		</c:if>
-		<%@include file="jspt/navbar.jspt" %>
+<%--		<c:if test="${empty sessionScope.user || empty requestScope.ordersnum || empty requestScope.cartnum}">--%>
+<%--			<jsp:forward page="user.jsp"></jsp:forward>--%>
+<%--		</c:if>--%>
+		<%@include file="jspt/navbar.jsp" %>
 		<!--网站导航-->
 		<div class="container">
 			<div class="row text-right">
@@ -198,7 +198,7 @@
 		</div>
 		<!--end订单页面-->
 		<!--end 用户数据-->
-		<%@include file="jspt/bottombar.jspt" %>
+		<%@include file="jspt/bottombar.jsp" %>
 	</body>
 
 </html>

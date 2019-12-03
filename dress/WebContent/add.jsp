@@ -24,7 +24,7 @@
 		<c:if test="${sessionScope.user.role != 'admin' }">
 			<jsp:forward page="index.jsp"></jsp:forward>
 		</c:if>
-		<%@include file="jspt/navbar.jspt" %>
+		<%@include file="jspt/navbar.jsp" %>
 		<!--网站导航-->
 		<div class="container">
 			<div class="row text-right">
@@ -220,6 +220,6 @@
 			</div>
 		</div>
 		
-		<%@include file="jspt/bottombar.jspt" %>
+		<%@include file="jspt/bottombar.jsp" %>
 	</body>
 </html>

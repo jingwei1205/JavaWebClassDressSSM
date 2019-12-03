@@ -65,7 +65,11 @@ public class UserController {
 					response.addCookie(cookie);
 				}			
 				map.put("state","true");
-				map.put("user", user);				
+				map.put("user", user);
+				System.out.println(user.getRole());
+				if("admin".equals(user.getRole())){
+					map.put("role","admin");
+				}
 			}else {
 				map.put("state","false");
 			}			
@@ -88,5 +92,4 @@ public class UserController {
 		response.sendRedirect("index");
 	
 	}
-	
 }

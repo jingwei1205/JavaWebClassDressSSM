@@ -54,4 +54,50 @@ public class RegisterController {
             return "false";
         }
     }
+
+    @RequestMapping("/searchUser")
+    @ResponseBody
+    public Object searchUser(HttpSession session,HttpServletResponse response,String type,String val){
+        User user;
+        Map<String,Object> map = new HashMap<String,Object>();
+        System.out.println("username".equals(type)+"\t"+val);
+        if("username".equals(type)){
+            user=registerService.lookUserInName(val);
+            if(user!=null)
+            {
+                map.put("state","true");
+                System.out.println("nb");
+            }
+            else map.put("state","false");
+        }
+        else {
+            int newValue =Integer.parseInt(val);
+            user=registerService.lookUserInId(newValue);
+            if(user!=null)
+                map.put("state","true");
+            else return map;
+        }
+        map.put("id",user.getId());
+        map.put("username",user.getUsername());
+        map.put("name",user.getName());
+        map.put("gender",user.getGender());
+        map.put("email",user.getEmail());
+        map.put("telephone",user.getTelephone());
+        map.put("role",user.getRole());
+        map.put("introduce",user.getIntroduce());
+        map.put("userstate","1");
+        map.put("regtime",user.getRegistTime());
+        map.put("address",user.getShippingAddress());
+        return map;
+    }
+
+    @RequestMapping("/DeleteUser")
+    public Object deleteUser(HttpSession session,HttpServletResponse response,String username){
+        int changeStatus = registerService.deleteUser(username);
+        Map<String,Object> map = new HashMap<String,Object>();
+        if(changeStatus!=0){
+            map.put("state","true");
+        }
+        return map;
+    }
 }

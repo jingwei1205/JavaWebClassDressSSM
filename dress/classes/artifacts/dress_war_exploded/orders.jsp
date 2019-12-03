@@ -17,9 +17,9 @@
 	</head>
 
 	<body>
-		<c:if test="${empty requestScope.orders && requestScope.state != false }">
-			<jsp:forward page="Orders"></jsp:forward>
-		</c:if>
+<%--		<c:if test="${empty requestScope.orders && requestScope.state != false }">--%>
+<%--			<jsp:forward page="Orders"></jsp:forward>--%>
+<%--		</c:if>--%>
 		<%@include file="jspt/navbar.jsp" %>
 			
 		<!--网站导航-->

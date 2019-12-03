@@ -5,32 +5,38 @@ $(function(){
 	$("#page0").find("input[name='deleuserdate']").next().click(function(){
 		var seltype = $("input[name='deleuser']:checked").val();
 		var val = $("#page0").find("input[name='deleuserdate']").val();
-		var arr = new Array();
-		arr = val.split("");
-		val = "";
-		for(var i = 0; i < arr.length; i ++){
-			val = val + "u" + arr[i].charCodeAt(0).toString(16);
-		}
-		$.getJSON("DeleteUser","type=" + seltype + "&val=" + val,function(t){
-			if(t.state == "true"){
-				var $te = $("#deleUserDate").find("td");
-				$(".deleuserdateDiv").show(500);
-				$(".notFindUser").hide(100);
-				$te.eq(1).text(t.id);
-				$te.eq(3).text(t.username);
-				$te.eq(5).text(t.name);
-				$te.eq(7).text(t.gender == "m" ? "男" : "女");
-				$te.eq(9).text(t.email);
-				$te.eq(11).text(t.telephone);
-				$te.eq(13).text(t.role == "admin" ? "管理员":"vip");
-				$te.eq(15).text(t.introduce);
-				$te.eq(17).text(t.userstate == "0" ? "冻结" : "正常");
-				$te.eq(19).text(t.regtime);
-				$te.eq(21).text(t.address);
-			}else{
-				$(".deleuserdateDiv").hide(500);
-				$(".notFindUser").show(100);
-				$(".notFindUser").text("没有搜索到用户")
+		// var arr = new Array();
+		// arr = val.split("");
+		// val = "";
+		// for(var i = 0; i < arr.length; i ++){
+		// 	val = val + "u" + arr[i].charCodeAt(0).toString(16);
+		// }
+		$.ajax({
+			url  : "searchUser",
+			type : "post",
+			data : "type=" + seltype
+				   + "&val=" + val,
+			success : function(t) {
+				if (t.state == "true") {
+					var $te = $("#deleUserDate").find("td");
+					$(".deleuserdateDiv").show(500);
+					$(".notFindUser").hide(100);
+					$te.eq(1).text(t.id);
+					$te.eq(3).text(t.username);
+					$te.eq(5).text(t.name);
+					$te.eq(7).text(t.gender == "m" ? "男" : "女");
+					$te.eq(9).text(t.email);
+					$te.eq(11).text(t.telephone);
+					$te.eq(13).text(t.role == "admin" ? "管理员" : "vip");
+					$te.eq(15).text(t.introduce);
+					$te.eq(17).text(t.userstate == "0" ? "冻结" : "正常");
+					$te.eq(19).text(t.regtime);
+					$te.eq(21).text(t.address);
+				} else {
+					$(".deleuserdateDiv").hide(500);
+					$(".notFindUser").show(100);
+					$(".notFindUser").text("没有搜索到用户")
+				}
 			}
 		});
 

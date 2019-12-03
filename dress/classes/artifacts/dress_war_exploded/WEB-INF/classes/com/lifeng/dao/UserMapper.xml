@@ -8,4 +8,13 @@
 	<select id="whetherExist" parameterType="String" resultType="User">
 		select username from user where username=#{username}
 	</select>
+	<delete id="deleteUser" parameterType="String">
+		delete from user where username=#{username}
+	</delete>
+	<select id="lookUserInName" parameterType="String" resultType="User">
+		select * from user where username=#{value}
+	</select>
+	<select id="lookUserInId" parameterType="Integer" resultType="User">
+		select * from user where id=#{value}
+	</select>
 </mapper>

@@ -58,7 +58,13 @@ $(function(){
 				data:"username=" + username + "&password=" + passwd + "&autologin=" + zidong+"&path="+getPath(),
 				success:function(logindata){
 					if(logindata.state == "true"){
-						alert("登录成功");
+						if(logindata.role == "admin") {
+							alert("欢迎登陆，管理员" + logindata.user.username);
+
+						}
+						else {
+							alert("登录成功");
+						}
 						$("#helloStr").html("您好，" + logindata.user.username + "<a href='javascript:void(0)' class='logoutbutton' style='color:red'>退出</a>");
 						$("#maxDiv").slideUp();
 						var $row5 = $(".row5");
