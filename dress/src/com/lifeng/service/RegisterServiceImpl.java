@@ -32,11 +32,14 @@ public class RegisterServiceImpl implements RegisterService{
     }
 
     @Override
-    public int deleteUser(String username){return userDao.deleteUser(username);}
+    public int deleteUser(int id){return userDao.deleteUser(id);}
 
     @Override
     public User lookUserInName(String value){return  userDao.lookUserInName(value);}
 
     @Override
     public User lookUserInId(int value){return  userDao.lookUserInId(value);}
+
+    @Override
+    public int modifiablevariable(User user){return userDao.modifiablevariable(user);}
 }

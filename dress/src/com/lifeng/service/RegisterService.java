@@ -5,7 +5,8 @@ import com.lifeng.entity.User;
 public interface RegisterService {
     public void regist(User user);
     public User checkUser(String username);
-    public int deleteUser(String username);
+    public int deleteUser(int id);
     public User lookUserInName(String value);
     public User lookUserInId(int value);
+    public int modifiablevariable(User user);
 }

@@ -47,12 +47,17 @@ $(function(){
 		var username = $("#deleUserDate").find("td").eq(3).text();
 		var id = $("#deleUserDate").find("td").eq(1).text();
 		if(confirm("是否删除 \n用户名：" + username + "\nid：" + id)){
-			$.getJSON("DeleteUser","type=mod&id=" + id, function(t){
-				if(t.state == "true"){
-					alert("删除成功");
-					$(".deleuserdateDiv").hide();
-				}else{
-					alert("删除失败");
+			$.ajax({
+				url:"DeleteUser",
+				type:"post",
+				data:"type=mod&id=" + id,
+				success:function(t) {
+					if (t.state == "true") {
+						alert("删除成功");
+						$(".deleuserdateDiv").hide();
+					} else {
+						alert("删除失败");
+					}
 				}
 			})
 		}
@@ -63,41 +68,46 @@ $(function(){
 	$("#moduser").find("input[name='modiuserdate']").blur(function(){
 		var stype = $("#moduser").find("input[name='moduser']:checked").val();
 		var val = $(this).val();
-		arr = val.split("");
-		val = "";
-		for(var i = 0; i < arr.length; i ++){
-			val = val + "u" + arr[i].charCodeAt(0).toString(16);
-		}
-		$.getJSON("DeleteUser", "type=" + stype + "&val=" + val,function(t){
-			if(t.state == "true"){
-				var $te = $(".modiuserdataDiv").find("td").find("input");
-				$(".modiuserdataDiv").show(500);
-				$(".notFindUsertomod").hide(100);
-				$te.eq(0).val(t.id);
-				$te.eq(1).val(t.username);
-				$te.eq(2).val(t.name);
-				if(t.gender == "m"){
-					$te.eq(3).attr("checked", "checked");
-				}else{
-					$te.eq(4).attr("checked", "checked");
+		// arr = val.split("");
+		// val = "";
+		// for(var i = 0; i < arr.length; i ++){
+		// 	val = val + "u" + arr[i].charCodeAt(0).toString(16);
+		// }
+		$.ajax({
+			url:"searchUser",
+			type:"post",
+			data:"type=" + stype + "&val=" + val,
+			success:function(t) {
+				if (t.state == "true") {
+					var $te = $(".modiuserdataDiv").find("td").find("input");
+					$(".modiuserdataDiv").show(500);
+					$(".notFindUsertomod").hide(100);
+					$te.eq(0).val(t.id);
+					$te.eq(1).val(t.username);
+					$te.eq(2).val(t.name);
+					if (t.gender == "m") {
+						$te.eq(3).attr("checked", "checked");
+					} else {
+						$te.eq(4).attr("checked", "checked");
+					}
+					$te.eq(5).val(t.email);
+					$te.eq(6).val(t.telephone);
+					$te.eq(7).val(t.introduce);
+					if (t.userstate == "0") {
+						$te.eq(9).attr("checked", "checked");
+					} else {
+						$te.eq(8).attr("checked", "checked");
+					}
+					if (t.role == "admin") {
+						$te.eq(10).attr("checked", "checked");
+					} else {
+						$te.eq(11).attr("checked", "checked");
+					}
+					$te.eq(12).val(t.regtime);
+				} else {
+					$(".modiuserdataDiv").hide(500);
+					$(".notFindUsertomod").show(100);
 				}
-				$te.eq(5).val(t.email);
-				$te.eq(6).val(t.telephone);
-				$te.eq(7).val(t.introduce);
-				if(t.userstate == "0"){
-					$te.eq(9).attr("checked", "checked");
-				}else{
-					$te.eq(8).attr("checked", "checked");
-				}
-				if(t.role == "admin"){
-					$te.eq(10).attr("checked", "checked");
-				}else{
-					$te.eq(11).attr("checked", "checked");
-				}
-				$te.eq(12).val(t.regtime);
-			}else{
-				$(".modiuserdataDiv").hide(500);
-				$(".notFindUsertomod").show(100);
 			}
 		});
 	});
@@ -128,7 +138,7 @@ $(function(){
 				+ "&userstate=" + userstate
 				+ "&role=" + role,
 				success:function(t){
-					if(t == "true"){
+					if(t.state == "true"){
 						alert("用户修改成功");
 						$(".modiuserdataDiv").hide();
 					}else{

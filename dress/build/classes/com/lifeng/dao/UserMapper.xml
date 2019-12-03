@@ -8,8 +8,8 @@
 	<select id="whetherExist" parameterType="String" resultType="User">
 		select username from user where username=#{username}
 	</select>
-	<delete id="deleteUser" parameterType="String">
-		delete from user where username=#{username}
+	<delete id="deleteUser" parameterType="Integer">
+		delete from user where id=#{id}
 	</delete>
 	<select id="lookUserInName" parameterType="String" resultType="User">
 		select * from user where username=#{value}
@@ -17,4 +17,9 @@
 	<select id="lookUserInId" parameterType="Integer" resultType="User">
 		select * from user where id=#{value}
 	</select>
+	<update id="modifiablevariable" parameterType="User">
+		UPDATE USER SET username=#{username},name=#{name},gender=#{gender},
+		email=#{email},telephone=#{telephone},introduce=#{introduce},role=#{role}
+		WHERE id=#{id}
+	</update>
 </mapper>

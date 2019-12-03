@@ -60,13 +60,12 @@ public class RegisterController {
     public Object searchUser(HttpSession session,HttpServletResponse response,String type,String val){
         User user;
         Map<String,Object> map = new HashMap<String,Object>();
-        System.out.println("username".equals(type)+"\t"+val);
+        //System.out.println("username".equals(type)+"\t"+val);
         if("username".equals(type)){
             user=registerService.lookUserInName(val);
             if(user!=null)
             {
                 map.put("state","true");
-                System.out.println("nb");
             }
             else map.put("state","false");
         }
@@ -92,12 +91,34 @@ public class RegisterController {
     }
 
     @RequestMapping("/DeleteUser")
-    public Object deleteUser(HttpSession session,HttpServletResponse response,String username){
-        int changeStatus = registerService.deleteUser(username);
+    @ResponseBody
+    public Object deleteUser(HttpSession session,HttpServletResponse response,String type,String id){
         Map<String,Object> map = new HashMap<String,Object>();
-        if(changeStatus!=0){
-            map.put("state","true");
+        //System.out.println(type+"\t"+id);
+        int intId=Integer.parseInt(id);
+        //删除操作
+        if("mod".equals(type)){
+            int changeStatus = registerService.deleteUser(intId);
+            if(changeStatus!=0){
+                map.put("state","true");
+                return map;
+            }
+            else map.put("state","false");
         }
+        return map;
+    }
+
+    @RequestMapping("/ModifyUser")
+    @ResponseBody
+    public Object ModifyUser(HttpSession session,HttpServletResponse response,User user){
+        Map<String,Object> map = new HashMap<String,Object>();
+        int changeStatus = registerService.modifiablevariable(user);
+        System.out.println(changeStatus);
+        if(changeStatus !=0){
+            map.put("state","true");
+            return map;
+        }
+        map.put("state" , "false");
         return map;
     }
 }
