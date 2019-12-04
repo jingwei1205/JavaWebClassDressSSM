@@ -56,7 +56,7 @@ $(function(){
 						alert("删除成功");
 						$(".deleuserdateDiv").hide();
 					} else {
-						alert("删除失败");
+						alert("删除失败,该用户可能还有未完成的订单！请订单完成后注销该用户！");
 					}
 				}
 			})

@@ -42,4 +42,10 @@ public class RegisterServiceImpl implements RegisterService{
 
     @Override
     public int modifiablevariable(User user){return userDao.modifiablevariable(user);}
+
+    @Override
+    public int modifyData(User user){return userDao.modifyData(user);}
+
+    @Override
+    public int modifyAddress(String shippingAddress,String telephone,String name,String username){return userDao.modifyAddress(shippingAddress,telephone,name,username);}
 }

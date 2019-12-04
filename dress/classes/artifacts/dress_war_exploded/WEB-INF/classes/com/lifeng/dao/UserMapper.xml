@@ -22,4 +22,13 @@
 		email=#{email},telephone=#{telephone},introduce=#{introduce},role=#{role}
 		WHERE id=#{id}
 	</update>
+	<update id="modifyData" parameterType="User">
+			update user set gender=#{gender},email=#{email},telephone=#{telephone},
+			introduce=#{introduce}
+			where username=#{username}
+	</update>
+	<update id="modifyAddress" parameterType="String">
+		update user set shippingAddress=#{0},telephone=#{1},name=#{2}
+		where username=#{3}
+	</update>
 </mapper>

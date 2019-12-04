@@ -16,16 +16,24 @@ $(function(){
 		var name = $(".ModifyAddressMsg").find("input[name='name']").val();
 		var addr = $("input[name='address']").val();
 		var reg = /^[0-9]{6,20}$/;
-		if(address == null || address == "" || telephone == null || telephone == "" || name == null || name == ""){
+		var username=$("#username").text();
+		alert(username);
+		if (city==null)
+			var shippingAddress=province+area+addr;
+		else{var shippingAddress=province+city+area+addr;}
+		if(shippingAddress == null || shippingAddress == "" || telephone == null || telephone == "" || name == null || name == ""){
 			alert("请填写完整信息");
 		}else if(!reg.test(telephone)){
 			alert("电话号码格式不正确");
 		}else{
 			$.ajax({
+				url:"ModifyAddress",
 				type:"post",
-				url:"ModifyData",
-				data:"type=shopp&province=" + province + "&city=" + city +"&area=" + area + "&addr=" + addr +"&telephone=" + telephone + "&name=" + name,
-				dataType:"json",
+				data:"type=shop&shippingAddress=" + shippingAddress
+					+"&telephone=" + telephone
+					+ "&name=" + name
+				    +"&username="+username,
+				// dataType:"Json",
 				success:function(t){
 					alert(t);
 					if(t.state == "true"){
@@ -49,6 +57,7 @@ $(function(){
 	//保存修改用户资料按钮
 	$("#save").click(function(){
 		var $page1 = $("#page1");
+		var username = $page1.find("input[name='username']").val();
 		var gender = $page1.find("input[name='gender']:checked").val();
 		var email = $page1.find("input[name='email']").val();
 		var telephone = $page1.find("input[name='telephone']").val();
@@ -58,10 +67,15 @@ $(function(){
 				$.ajax({
 					type:"post",
 					url:"ModifyData",
-					data:"type=basic&gender=" + gender + "&email=" + email + "&telephone=" + telephone + "&introduce=" + introduce,
+					data:"type=basic&gender=" + gender
+						+ "&email=" + email
+						+ "&telephone="
+						+ telephone
+						+ "&introduce=" + introduce
+					    +"&username="+username,
 					dataType:"text",
 					success:function(t){
-						if(t == "true"){
+						if(t=="true"){
 							alert("修改成功");
 						}else{
 							alert("修改失败");

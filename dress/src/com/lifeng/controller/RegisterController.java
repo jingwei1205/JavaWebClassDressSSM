@@ -31,8 +31,13 @@ public class RegisterController {
     @Autowired
     private RegisterService registerService;
 
-    public RegisterService getRegisterService(){return registerService;}
-    public void setRegisterService(RegisterService registerService){this.registerService=registerService;}
+    public RegisterService getRegisterService() {
+        return registerService;
+    }
+
+    public void setRegisterService(RegisterService registerService) {
+        this.registerService = registerService;
+    }
 
     @RequestMapping("/regist")
     @ResponseBody
@@ -43,82 +48,110 @@ public class RegisterController {
 
     @RequestMapping("/checkUser")
     @ResponseBody
-    public String checkUser(HttpSession session, HttpServletResponse response,String username) {
-        System.out.println(username+"\n");
-        User user=registerService.checkUser(username);
-        if(user==null){
+    public String checkUser(HttpSession session, HttpServletResponse response, String username) {
+        System.out.println(username + "\n");
+        User user = registerService.checkUser(username);
+        if (user == null) {
             return "true";
-        }
-        else {
-            System.out.println(user.getUsername()+"\n");
+        } else {
+            System.out.println(user.getUsername() + "\n");
             return "false";
         }
     }
 
     @RequestMapping("/searchUser")
     @ResponseBody
-    public Object searchUser(HttpSession session,HttpServletResponse response,String type,String val){
+    public Object searchUser(HttpSession session, HttpServletResponse response, String type, String val) {
         User user;
-        Map<String,Object> map = new HashMap<String,Object>();
+        Map<String, Object> map = new HashMap<String, Object>();
         //System.out.println("username".equals(type)+"\t"+val);
-        if("username".equals(type)){
-            user=registerService.lookUserInName(val);
-            if(user!=null)
-            {
-                map.put("state","true");
-            }
-            else map.put("state","false");
-        }
-        else {
-            int newValue =Integer.parseInt(val);
-            user=registerService.lookUserInId(newValue);
-            if(user!=null)
-                map.put("state","true");
+        if ("username".equals(type)) {
+            user = registerService.lookUserInName(val);
+            if (user != null) {
+                map.put("state", "true");
+            } else map.put("state", "false");
+        } else {
+            int newValue = Integer.parseInt(val);
+            user = registerService.lookUserInId(newValue);
+            if (user != null)
+                map.put("state", "true");
             else return map;
         }
-        map.put("id",user.getId());
-        map.put("username",user.getUsername());
-        map.put("name",user.getName());
-        map.put("gender",user.getGender());
-        map.put("email",user.getEmail());
-        map.put("telephone",user.getTelephone());
-        map.put("role",user.getRole());
-        map.put("introduce",user.getIntroduce());
-        map.put("userstate","1");
-        map.put("regtime",user.getRegistTime());
-        map.put("address",user.getShippingAddress());
+        map.put("id", user.getId());
+        map.put("username", user.getUsername());
+        map.put("name", user.getName());
+        map.put("gender", user.getGender());
+        map.put("email", user.getEmail());
+        map.put("telephone", user.getTelephone());
+        map.put("role", user.getRole());
+        map.put("introduce", user.getIntroduce());
+        map.put("userstate", "1");
+        map.put("regtime", user.getRegistTime());
+        map.put("address", user.getShippingAddress());
         return map;
     }
 
     @RequestMapping("/DeleteUser")
     @ResponseBody
-    public Object deleteUser(HttpSession session,HttpServletResponse response,String type,String id){
-        Map<String,Object> map = new HashMap<String,Object>();
+    public Object deleteUser(HttpSession session, HttpServletResponse response, String type, String id) {
+        Map<String, Object> map = new HashMap<String, Object>();
         //System.out.println(type+"\t"+id);
-        int intId=Integer.parseInt(id);
+        int intId = Integer.parseInt(id);
         //删除操作
-        if("mod".equals(type)){
-            int changeStatus = registerService.deleteUser(intId);
-            if(changeStatus!=0){
-                map.put("state","true");
-                return map;
+        if ("mod".equals(type)) {
+            try {
+                int changeStatus = registerService.deleteUser(intId);
+                if (changeStatus != 0) {
+                    map.put("state", "true");
+                    return map;
+                } else map.put("state", "false");
+            } catch (Exception e) {
+                map.put("state", "false");
             }
-            else map.put("state","false");
         }
         return map;
     }
 
     @RequestMapping("/ModifyUser")
     @ResponseBody
-    public Object ModifyUser(HttpSession session,HttpServletResponse response,User user){
-        Map<String,Object> map = new HashMap<String,Object>();
+    public Object ModifyUser(HttpSession session, HttpServletResponse response, User user) {
+        Map<String, Object> map = new HashMap<String, Object>();
         int changeStatus = registerService.modifiablevariable(user);
-        System.out.println(changeStatus);
-        if(changeStatus !=0){
-            map.put("state","true");
+        //System.out.println(changeStatus);
+        if (changeStatus != 0) {
+            map.put("state", "true");
             return map;
         }
-        map.put("state" , "false");
+        map.put("state", "false");
+        return map;
+    }
+
+    @RequestMapping("/ModifyData")
+    @ResponseBody
+    public Object ModifyData(HttpSession session, HttpServletResponse response, String type,User user) {
+        int changeStatus = registerService.modifyData(user);
+        //System.out.println(changeStatus);
+        if (changeStatus != 0) {
+            return "true";
+        }
+        return "false";
+    }
+
+    @RequestMapping("/ModifyAddress")
+    @ResponseBody
+    public Object modifyAddress(HttpSession session, HttpServletResponse response, String type,String shippingAddress,String telephone,String name,String username) {
+        Map<String, Object> map = new HashMap<String, Object>();
+        int changeStatus = registerService.modifyAddress(shippingAddress,telephone,name,username);
+        System.out.println(shippingAddress+telephone+name+username+changeStatus);
+        if (changeStatus != 0) {
+            System.out.println(shippingAddress);
+            map.put("state", "true");
+            map.put("addr", shippingAddress);
+            map.put("mame", name);
+            map.put("telephone", telephone);
+        }
+        else map.put("state", "false");
         return map;
     }
 }
+

@@ -129,7 +129,7 @@
 									<div class="col-sm-4 text-right">购物车</div>
 									<div class="col-sm-4">${requestScope.cartnum }件</div>
 									<div class="col-sm-4">
-										<a href="cart.jsp" class="btn btn-default">
+										<a href="findCart" class="btn btn-default">
 											<span class="glyphicon glyphicon-shopping-cart"></span> 查看购物车
 										</a>
 									</div>

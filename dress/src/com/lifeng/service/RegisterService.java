@@ -9,4 +9,6 @@ public interface RegisterService {
     public User lookUserInName(String value);
     public User lookUserInId(int value);
     public int modifiablevariable(User user);
+    public int modifyData(User user);
+    public int modifyAddress(String shippingAddress,String telephone,String name,String username);
 }
