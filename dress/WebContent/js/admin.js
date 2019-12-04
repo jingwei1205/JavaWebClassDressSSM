@@ -227,55 +227,65 @@ $(function(){
 	// 显示订单函数
 	orderShow("all",1);
 	function orderShow(type, pagenum){
-		$.getJSON("OrderShow", "type=" + type + "&pagenum=" + pagenum, function(t){
-			if(t.state == "true"){
-				$(".ordersAdmin").find("span").text("第" + pagenum + "页/共" + t.pagesum + "页");
-				$(".order").remove();
-				for(var i = 0; i < t.orders.length; i ++){
-					var orderstate;
-					var btntype = "";
-					if(t.orders[i].state == "-1"){
-						btntype = "<button type='button' class='btn btn-danger btn-sm cancel'>取消</button>"
+		$.ajax({
+			url: "OrderShow",
+			type: "post",
+			data: {
+				type: type,
+				pagenum: pagenum
+			},
+			dataType: "json",
+			// "type=" + type + "&pagenum=" + pagenum,
+			success: function (t) {
+				if (t.state == "true") {
+					$(".ordersAdmin").find("span").text("第" + pagenum + "页/共" + t.pagesum + "页");
+					$(".order").remove();
+					for (var i = 0; i < t.orders.length; i++) {
+						var orderstate;
+						var btntype = "";
+						if (t.orders[i].state == "-1") {
+							btntype = "<button type='button' class='btn btn-danger btn-sm cancel'>取消</button>"
 							orderstate = "待付款";
-					}else if(t.orders[i].state == "-2"){
-						btntype = "<button type='button' class='btn btn-default btn-sm' disabled='disabled'>不可操作</button>";
-						orderstate = "待付款";
-					}else if(t.orders[i].state == "-3"){
-						btntype = "<button type='button' class='btn btn-default btn-sm' disabled='disabled'>不可操作</button>";
-						orderstate = "待评价";
-					}else if(t.orders[i].state == "-4"){
-						btntype = "<button type='button' class='btn btn-danger btn-sm tytk'>同意退款</button>";
-						orderstate = "退款中";
-					}else if(t.orders[i].state == "1"){
-						btntype = "<button type='button' class='btn btn-danger btn-sm delete'>删除</button>";
-						orderstate = "已完成";
-					}else if(t.orders[i].state == "2"){
-						btntype = "<button type='button' class='btn btn-danger btn-sm delete'>删除</button>";
-						orderstate = "已取消";
-					}else if(t.orders[i].state == "3"){
-						btntype = "<button type='button' class='btn btn-danger btn-sm delete'>删除</button>";
-						orderstate = "已退款";
-					}else{
-						btntype = "<button type='button' class='btn btn-danger btn-sm delete'>删除</button>";
-						orderstate = "有异常";
-					}
-					var h = "<div class='order row'>"
-						+	"<div class='col-md-2 oid'>" + t.orders[i].id + "</div>"
-						+	"<div class='col-md-2 pro_id'>" + t.orders[i].pro_id + "</div>"
-						+	"<div class='col-md-2 uid'>" + t.orders[i].userid + "</div>"
-						+	"<div class='col-md-2 pnum'>x " + t.orders[i].pnum + "</div>"
-						+	"<div class='col-md-2 logistics'>"
-						+		"<a href='javascript:void(0)'>" + orderstate + "</a>"
-						+	"</div>"
-						+		"<div class='col-md-2 operation'>"
-						+   		btntype
-						+		"</div>"
-						+"</div>";
-					$(".ordersAdmin").find(".ordertop").after(h);
-				}
-				if(t.orders.length == 0){
-					var h = "<div class='text-center'>还没有订单哦</div>"
+						} else if (t.orders[i].state == "-2") {
+							btntype = "<button type='button' class='btn btn-default btn-sm' disabled='disabled'>不可操作</button>";
+							orderstate = "待付款";
+						} else if (t.orders[i].state == "-3") {
+							btntype = "<button type='button' class='btn btn-default btn-sm' disabled='disabled'>不可操作</button>";
+							orderstate = "待评价";
+						} else if (t.orders[i].state == "-4") {
+							btntype = "<button type='button' class='btn btn-danger btn-sm tytk'>同意退款</button>";
+							orderstate = "退款中";
+						} else if (t.orders[i].state == "1") {
+							btntype = "<button type='button' class='btn btn-danger btn-sm delete'>删除</button>";
+							orderstate = "已完成";
+						} else if (t.orders[i].state == "2") {
+							btntype = "<button type='button' class='btn btn-danger btn-sm delete'>删除</button>";
+							orderstate = "已取消";
+						} else if (t.orders[i].state == "3") {
+							btntype = "<button type='button' class='btn btn-danger btn-sm delete'>删除</button>";
+							orderstate = "已退款";
+						} else {
+							btntype = "<button type='button' class='btn btn-danger btn-sm delete'>删除</button>";
+							orderstate = "有异常";
+						}
+						var h = "<div class='order row'>"
+							+ "<div class='col-md-2 oid'>" + t.orders[i].id + "</div>"
+							+ "<div class='col-md-2 pro_id'>" + t.orders[i].pro_id + "</div>"
+							+ "<div class='col-md-2 uid'>" + t.orders[i].userid + "</div>"
+							+ "<div class='col-md-2 pnum'>x " + t.orders[i].pnum + "</div>"
+							+ "<div class='col-md-2 logistics'>"
+							+ "<a href='javascript:void(0)'>" + orderstate + "</a>"
+							+ "</div>"
+							+ "<div class='col-md-2 operation'>"
+							+ btntype
+							+ "</div>"
+							+ "</div>";
 						$(".ordersAdmin").find(".ordertop").after(h);
+					}
+					if (t.orders.length == 0) {
+						var h = "<div class='text-center'>还没有订单哦</div>"
+						$(".ordersAdmin").find(".ordertop").after(h);
+					}
 				}
 			}
 		});
@@ -287,27 +297,124 @@ $(function(){
 	$("#delepro").find(".soso").click(function(){
 		var id = $(this).prev().val();
 		var $btn = $(this);
-		$.getJSON("DelePro", "type=so&id=" + id, function(t){
-			if(t.state == "true"){
-				$btn.next().html("<a style='color:blue;' href='BookShow?id="+ t.id +"'>已搜到信息,点击查看>></a>");
-			}else
-				$btn.next().html("<a style='color:red;' href='javascript:void(0)'>未搜索到任何信息</a>");
+		$.ajax({
+			url: "DelePro",
+			type: "post",
+			data: "type=so&id=" + id,
+			datatype :"text",
+			success: function (t) {
+				if (t.state == "true") {
+					$btn.next().html("<a style='color:blue;' href='showDress?id=" + t.id + "'>已搜到信息,点击查看>></a>");
+				} else
+					$btn.next().html("<a style='color:red;' href='javascript:void(0)'>未搜索到任何信息</a>");
+			}
 		});
 	});
 
 	// 删除
 	$("#delepro").find(".dele").click(function(){
 		var id = $(this).prevAll("input[name='proID']").val();
+		alert(id);
 		if(confirm("是否删除？\nid=" + id)){
-			$.post("DelePro","type=dele&id=" + id, function(t){
-				if(t == "true"){
-					alert("删除成功")
-					$btn.prev().html("");
-				}else{
-					alert("删除失败")
+			$.ajax({
+				url:"DelePro",
+				type:"post",
+				data:"type=dele&id=" + id,
+				datatype:"text",
+				success:function(t) {
+					if (t.state == "true") {
+						alert("删除成功")
+						$btn.prev().html("");
+					} else {
+						alert("删除失败")
+					}
 				}
 			});
 		}
 	});
 
+	//修改查询赋值
+	$("#modipro").find(".soso").click(function(){
+		var p=$(".modipro");
+		var id = $(this).prevAll("input[name='modiIdentify']").val();
+		var dressname=p.find("input[name='']").val();
+		var category=p.find("input[name='']").val();
+		var price=p.find("input[name='']").val();
+		// var sales=p.find("input[name='']").val();
+		var description=p.find("input[name='']").val();
+
+		var $btn = $(this);
+		if(confirm("确认查询")) {
+			$.ajax({
+				url: "DelePro",
+				type: "post",
+				data: "type=so&id=" + id,
+				datatype: "text",
+				success: function (t) {
+					if (t.state == "true") {
+						// alert(t.category+t.sales+t.price+t.description);
+						$btn.next().html("<a style='color:blue;' href='showDress?id=" + t.id + "'>已搜到信息,点击查看>></a>");
+						var $te = $(".productsDiv").find("td").find("input");
+						$(".productsDiv").show(500);
+						$te.eq(0).val(t.id);
+						$te.eq(1).val(t.dressname);
+						if(t.category=="男装")
+							$te.eq(2).attr("checked","checked");
+						else {
+							$te.eq(3).attr("checked","checked");
+						}
+						$te.eq(4).val(t.price);
+						$te.eq(5).val(t.sales);
+						$te.eq(6).val(t.description);
+					} else {
+						$btn.next().html("<a style='color:red;' href='javascript:void(0)'>未搜索到任何信息</a>");
+						$(".productsDiv").hide(500);
+					}
+				}
+			});
+		}
+	});
+
+	//修改
+	$("#modipro").find(".revise").click(function() {
+		if(confirm("确认修改")) {
+			var p = $(".productsDiv");
+			var $te = $(".productsDiv").find("td").find("input");
+			var dressid = $te.eq(0).val();
+			var dressname = $te.eq(1).val();
+			var category = p.find("input[name='dressclass']:checked").val();
+			var price = $te.eq(4).val();
+			var description = $te.eq(6).val();
+			// alert(id);
+			// alert(category);
+			// alert(price);
+			// alert(description);
+			// alert(dressname);
+			$.ajax({
+				url:"modifyDress",
+				type:"post",
+				data:{
+					dressid:dressid,
+					dressname:dressname,
+					category:category,
+					price : price,
+					description : description
+				},
+				dataType :"json",
+				// date:"dressid="+id
+				// 	+"&dressname="+dressname
+				// 	+"&category="+ category
+				// 	+"&price="+ price
+				// 	+"&description="+description,
+				success : function(t) {
+					alert(t.state);
+				    if(t.state=="true"){
+				    	alert("商品修改成功");
+					}else {
+				    	alert("修改失败");
+					}
+				}
+			})
+		}
+	});
 });

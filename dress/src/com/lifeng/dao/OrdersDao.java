@@ -21,6 +21,8 @@ public interface OrdersDao{
 	//∂©µ•id—∞’“
 	public Order findOrderById(int id);
 
+	public List<Order> findAll();
+
 
 	
 }

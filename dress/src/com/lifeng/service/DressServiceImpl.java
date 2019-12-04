@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.lifeng.entity.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -64,6 +65,28 @@ public class DressServiceImpl implements DressService{
 	public void updateDress(Dress dress) {
 		dressDao.updateDress(dress);
 		
+	}
+
+	@Override
+	public Dress searchDress(int id){
+		return dressDao.searchDress(id);
+	}
+
+	@Override
+	public int deleteDress(int id){
+		return dressDao.deleDress(id);
+	}
+
+	@Override
+	public int updateInfo(int dressid,
+						  String dressname,String category,String price,
+						  String description)
+	{return dressDao.updateInfo(dressid,dressname,category,price,description);}
+
+	@Override
+	public int addDress(String dressname,String category,String price,
+						String quantity,String description){
+		return dressDao.addDress(dressname, category,price,quantity,description);
 	}
 
 }

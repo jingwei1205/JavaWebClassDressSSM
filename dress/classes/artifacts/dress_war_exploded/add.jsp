@@ -113,20 +113,20 @@
 
 		<div class="container max">
 			<div class="row text-center">
-				<h1>书本添加</h1>
+				<h1>商品添加</h1>
 				<br />
 			</div>
 			<div class="row">
-				<form action="AddBook" method="post" enctype="multipart/form-data" class="formmax">
+<%--				<form action="AddBook" method="post" enctype="multipart/form-data" class="formmax">--%>
 					<div class="col-md-3 col-xs-6 text-center input">
-						<b>*</b> 书本名称
+						<b>*</b> 商品名称
 					</div>
 					<div class="col-md-3 col-xs-6 input">
 						<input type="text" name="name" />
 						<span></span>
 					</div>
 					<div class="col-md-3 col-xs-6 text-center input">
-						<b>*</b> 书本价格
+						<b>*</b> 商品价格
 					</div>
 					<div class="col-md-3 col-xs-6 input">
 						<input type="text" name="price" placeholder="￥" />
@@ -134,79 +134,24 @@
 					</div>
 
 					<div class="col-md-3 col-xs-6 text-center input">
-						<b>*</b> 书本数量
+						<b>*</b> 商品数量
 					</div>
 					<div class="col-md-3 col-xs-6 input">
 						<input type="text" name="pnum" placeholder="" />
 						<span></span>
 					</div>
 					<div class="col-md-3 col-xs-6 text-center input">
-						<b>*</b> 书本作者
+						<b> </b> &nbsp;商品类型
 					</div>
 					<div class="col-md-3 col-xs-6 input">
-						<input type="text" name="author" placeholder="" />
-						<span></span>
+						<input type="radio" name="dressclass" value="男装" />男装&nbsp;&nbsp;
+						<input type="radio" name="dressclass" value="女装" />女装&nbsp;&nbsp;
 					</div>
 					<div class="col-md-3 col-xs-6 text-center input">
-						<b> </b> &nbsp;书本类型
-					</div>
-					<div class="col-md-3 col-xs-6 input">
-						<select name="category">
-							<option class="btn btn-default" value="none">无</option>
-							<option class="btn btn-default" value="rj">软件</option>
-							<option class="btn btn-default" value="yj">硬件</option>
-							<option class="btn btn-default" value="wl">网络</option>
-							<option class="btn btn-default" value="wx">文学</option>
-							<option class="btn btn-default" value="ls">历史</option>
-							<option class="btn btn-default" value="sx">思想</option>
-							<option class="btn btn-default" value="sh">生活</option>
-							<option class="btn btn-default" value="yy">语言</option>
-							<option class="btn btn-default" value="re">人际</option>
-							<option class="btn btn-default" value="rw">人文</option>
-							<option class="btn btn-default" value="ys">艺术</option>
-							<option class="btn btn-default" value="xw">行为</option>
-							<option class="btn btn-default" value="ty">体育</option>
-							<option class="btn btn-default" value="yd">运动</option>
-							<option class="btn btn-default" value="sl">生理</option>
-							<option class="btn btn-default" value="zc">政治</option>
-							<option class="btn btn-default" value="js">军事</option>
-							<option class="btn btn-default" value="jj">经济</option>
-							<option class="btn btn-default" value="qt">其他</option>
-						</select>
-					</div>
-					<div class="col-md-3 col-xs-6 text-center input">
-						<b> </b> &nbsp;书本描述
+						<b> </b> &nbsp;描述
 					</div>
 					<div class="col-md-3 col-xs-6 input">
 						<input type="text" name="description" placeholder="" />
-						<span></span>
-					</div>
-					<div class="col-md-3 col-xs-6 text-center input">
-						<b>*</b> &nbsp;主图
-					</div>
-					<div class="col-md-3 col-xs-6 input">
-						<input type="file" name="mainimg" placeholder="" />
-						<span></span>
-					</div>
-					<div class="col-md-3 col-xs-6 text-center input">
-						&nbsp;副图1
-					</div>
-					<div class="col-md-3 col-xs-6 input">
-						<input type="file" name="img1" placeholder="" />
-						<span></span>
-					</div>
-					<div class="col-md-3 col-xs-6 text-center input">
-						&nbsp;副图2
-					</div>
-					<div class="col-md-3 col-xs-6 input">
-						<input type="file" name="img2" placeholder="" />
-						<span></span>
-					</div>
-					<div class="col-md-3 col-xs-6 text-center input">
-						&nbsp;副图3
-					</div>
-					<div class="col-md-3 col-xs-6 input">
-						<input type="file" name="img3" placeholder="" />
 						<span></span>
 					</div>
 					<div class="col-md-12 col-xs-12 text-center input" style="color:red;">
@@ -214,9 +159,9 @@
 					</div>
 					<div class="col-md-12 col-xs-12 text-center">
 						<a id="yulan" href="javascript:void(0)" class="btn btn-default btn-lg" style="width: 105px;height: 48px;">预览</a>
-						<input type="submit" class="btn btn-info btn-lg" value="添加书本"/>
+						<input type="submit" class="btn btn-info btn-lg addBtn" value="添加商品"/>
 					</div>
-				</form>
+<%--				</form>--%>
 			</div>
 		</div>
 		

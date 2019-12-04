@@ -47,4 +47,18 @@
  	<update id="updateDress" parameterType="Dress">
 		UPDATE dress SET quantity=#{quantity},sales=#{sales} WHERE dressid= #{dressid}
     </update>
+	<select id="searchDress" parameterType="Integer" resultType="Dress">
+		select * from dress where dressid=#{id}
+	</select>
+	<delete id="deleDress" parameterType="Integer">
+		delete from dress where dressid=#{id}
+	</delete>
+	<update id="updateInfo">
+		update dress set dressname=#{1},category=#{2},price=#{3},description=#{4}
+		where dressid=#{0}
+	</update>
+	<insert id="addDress" parameterType="String">
+		insert into dress(dressname, category, price, quantity, description)
+		values(#{0},#{1},#{2},#{3},#{4})
+	</insert>
 </mapper>

@@ -245,30 +245,67 @@
 										<button class="btn btn-danger btn-sm dele" hidden="hidden">删除</button>
 									</div>
 									<div class="tab-pane" id="modipro">
-										<br /> ID <input type="text" /><button class="soso">搜索</button>
-										<table class="table"hidden="hidden" >
-											<tr>
-												<td>书籍名</td>
-												<td>
-													<input type="text" name="bookname" value="">
-													<button class="btn btn-danger btn-sm">修改</button>
-												</td>
-											</tr>
-											<tr>
-												<td>价格</td>
-												<td>
-													<input type="text" name="price" value="">
-													<button class="btn btn-danger btn-sm">修改</button>
-												</td>
-											</tr>
-											<tr>
-												<td>数量</td>
-												<td>
-													<input type="text" name="pnum" value="">
-													<button class="btn btn-danger btn-sm">修改</button>
-												</td>
-											</tr>
-										</table>
+										<br /> ID <input type="text" name="modiIdentify"/><button class="soso">搜索</button>
+
+<%--										<table class="table" hidden="hidden">--%>
+<%--											<tr>--%>
+<%--												<td>商品名</td>--%>
+<%--												<td>--%>
+<%--													<input type="text" name="bookname" value="">--%>
+<%--													<button class="btn btn-danger btn-sm">修改</button>--%>
+<%--												</td>--%>
+<%--											</tr>--%>
+<%--											<tr>--%>
+<%--												<td>价格</td>--%>
+<%--												<td>--%>
+<%--													<input type="text" name="price" value="">--%>
+<%--													<button class="btn btn-danger btn-sm">修改</button>--%>
+<%--												</td>--%>
+<%--											</tr>--%>
+<%--											<tr>--%>
+<%--												<td>数量</td>--%>
+<%--												<td>--%>
+<%--													<input type="text" name="pnum" value="">--%>
+<%--													<button class="btn btn-danger btn-sm">修改</button>--%>
+<%--												</td>--%>
+<%--											</tr>--%>
+<%--										</table>--%>
+											<h3>商品资料</h3>
+										    <div class="productsDiv" hidden="hidden">
+											<table class="table">
+<%--											<table class="table">--%>
+												<tr>
+													<td>ID</td>
+													<td><input type="text" name="id" value="" disabled="disabled" /></td>
+												</tr>
+												<tr>
+													<td>商品名称</td>
+													<td><input type="text" name="dressname" value="" /></td>
+												</tr>
+												<tr>
+													<td>商品类型</td>
+													<td>
+														<input type="radio" name="dressclass" value="男装" />男装&nbsp;&nbsp;
+														<input type="radio" name="dressclass" value="女装" />女装&nbsp;&nbsp;
+													</td>
+												</tr>
+												<tr>
+													<td>价格</td>
+													<td><input type="text" name="price" value="" /></td>
+												</tr>
+												<tr>
+													<td>销量</td>
+													<td><input type="text" name="sales" value="" disabled="disabled"/></td>
+												</tr>
+												<tr>
+													<td>描述</td>
+													<td><input type="text" name="introduce" value="" /></td>
+												</tr>
+											</table>
+                                        <div class="text-center">
+                                            <button class="btn btn-danger revise">确认修改</button>
+                                        </div>
+											</div>
 									</div>
 									<div class="tab-pane" id="addpro">
 										<br />

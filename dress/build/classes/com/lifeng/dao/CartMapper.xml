@@ -44,7 +44,7 @@
 		(#{dress.dressid}, #{user.id}, #{booknum})
    	</insert>
  	<update id="updateCart" parameterType="Cart">
-		UPDATE cart SET booknum=#{booknum} WHERE id= #{id}
+		UPDATE cart SET booknum=#{booknum} WHERE dressid= #{id}
     </update>	
  	
 </mapper>

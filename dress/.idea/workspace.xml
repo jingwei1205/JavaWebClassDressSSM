@@ -7,30 +7,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05358dfc-3696-4a55-9b4c-28bdbc0f4fd9" name="Default Changelist" comment="add RegisterService">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/814ada41-5e78-456a-8050-b243b3a7aa35.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/814ada41-5e78-456a-8050-b243b3a7aa35.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/js/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/js/add.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebContent/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/js/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/js/dobuy.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/js/dobuy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/js/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/js/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/controller/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/dao/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/dao/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/service/RegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/service/RegisterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/service/RegisterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/service/RegisterServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/controller/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/RegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/RegisterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/RegisterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/RegisterServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/controller/DressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/controller/DressController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/dao/CartMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/dao/CartMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/dao/DressDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/dao/DressDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/dao/DressMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/dao/DressMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/dao/OrdersDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/dao/OrdersDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/dao/OrdersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/dao/OrdersMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/service/DressService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/service/DressService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/service/DressServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/service/DressServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/service/OrdersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/service/OrdersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/lifeng/service/OrdersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/lifeng/service/OrdersServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/controller/DressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/controller/DressController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/CartMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/CartMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/DressDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/DressDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/DressMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/DressMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/OrdersDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/OrdersDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/OrdersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/dao/OrdersMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/DressService.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/DressService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/DressServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/DressServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/OrdersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/OrdersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/OrdersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/WEB-INF/classes/com/lifeng/service/OrdersServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/js/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/js/add.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/js/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/js/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/js/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/dress_war_exploded/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lifeng/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lifeng/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lifeng/dao/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/dao/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lifeng/service/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/service/RegisterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lifeng/service/RegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/service/RegisterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/controller/DressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/controller/DressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/dao/CartMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/dao/CartMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/dao/DressDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/dao/DressDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/dao/DressMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/dao/DressMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/dao/OrdersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/dao/OrdersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/dao/OrdersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/dao/OrdersMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/service/DressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/service/DressService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/service/DressServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/service/DressServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/service/OrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/service/OrdersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lifeng/service/OrdersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lifeng/service/OrdersServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +128,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/WebContent/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -119,7 +140,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -237,7 +258,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -286,6 +307,10 @@
       <workItem from="1575366046585" duration="23089000" />
       <workItem from="1575429437514" duration="6642000" />
       <workItem from="1575436277951" duration="4171000" />
+      <workItem from="1575442380470" duration="3466000" />
+      <workItem from="1575447240968" duration="3133000" />
+      <workItem from="1575459936609" duration="651000" />
+      <workItem from="1575460671757" duration="18667000" />
     </task>
     <servers />
   </component>
@@ -313,10 +338,10 @@
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="452" y="132" key="#Updates/0.40.1920.1040@0.40.1920.1040" timestamp="1575209294142" />
-    <state x="414" y="204" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575337925960">
+    <state x="414" y="204" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575466484412">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state x="414" y="204" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1920.1040@0.40.1920.1040" timestamp="1575337925960" />
+    <state x="414" y="204" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1920.1040@0.40.1920.1040" timestamp="1575466484412" />
     <state x="627" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1575302132533">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
@@ -325,58 +350,58 @@
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="454" y="80" key="CommitChangelistDialog2/0.40.1920.1040@0.40.1920.1040" timestamp="1575211531622" />
-    <state width="1596" height="188" key="GridCell.Tab.0.bottom" timestamp="1575440488335">
+    <state width="1596" height="212" key="GridCell.Tab.0.bottom" timestamp="1575480249033">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="188" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1575440488335" />
-    <state width="1596" height="188" key="GridCell.Tab.0.center" timestamp="1575440488335">
+    <state width="1596" height="212" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1575480249033" />
+    <state width="1596" height="212" key="GridCell.Tab.0.center" timestamp="1575480249033">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="188" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1575440488335" />
-    <state width="1596" height="188" key="GridCell.Tab.0.left" timestamp="1575440488335">
+    <state width="1596" height="212" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1575480249033" />
+    <state width="1596" height="212" key="GridCell.Tab.0.left" timestamp="1575480249033">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="188" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1575440488335" />
-    <state width="1596" height="188" key="GridCell.Tab.0.right" timestamp="1575440488335">
+    <state width="1596" height="212" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1575480249033" />
+    <state width="1596" height="212" key="GridCell.Tab.0.right" timestamp="1575480249033">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="188" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1575440488335" />
-    <state width="1596" height="188" key="GridCell.Tab.1.bottom" timestamp="1575440488335">
+    <state width="1596" height="212" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1575480249033" />
+    <state width="1596" height="212" key="GridCell.Tab.1.bottom" timestamp="1575480249033">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="188" key="GridCell.Tab.1.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1575440488335" />
-    <state width="1596" height="188" key="GridCell.Tab.1.center" timestamp="1575440488335">
+    <state width="1596" height="212" key="GridCell.Tab.1.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1575480249033" />
+    <state width="1596" height="212" key="GridCell.Tab.1.center" timestamp="1575480249033">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="188" key="GridCell.Tab.1.center/0.40.1920.1040@0.40.1920.1040" timestamp="1575440488335" />
-    <state width="1596" height="188" key="GridCell.Tab.1.left" timestamp="1575440488335">
+    <state width="1596" height="212" key="GridCell.Tab.1.center/0.40.1920.1040@0.40.1920.1040" timestamp="1575480249033" />
+    <state width="1596" height="212" key="GridCell.Tab.1.left" timestamp="1575480249033">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="188" key="GridCell.Tab.1.left/0.40.1920.1040@0.40.1920.1040" timestamp="1575440488335" />
-    <state width="1596" height="188" key="GridCell.Tab.1.right" timestamp="1575440488335">
+    <state width="1596" height="212" key="GridCell.Tab.1.left/0.40.1920.1040@0.40.1920.1040" timestamp="1575480249033" />
+    <state width="1596" height="212" key="GridCell.Tab.1.right" timestamp="1575480249033">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="188" key="GridCell.Tab.1.right/0.40.1920.1040@0.40.1920.1040" timestamp="1575440488335" />
-    <state width="1596" height="188" key="GridCell.Tab.2.bottom" timestamp="1575440488335">
+    <state width="1596" height="212" key="GridCell.Tab.1.right/0.40.1920.1040@0.40.1920.1040" timestamp="1575480249033" />
+    <state width="1596" height="212" key="GridCell.Tab.2.bottom" timestamp="1575480249033">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="188" key="GridCell.Tab.2.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1575440488335" />
-    <state width="1596" height="188" key="GridCell.Tab.2.center" timestamp="1575440488335">
+    <state width="1596" height="212" key="GridCell.Tab.2.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1575480249033" />
+    <state width="1596" height="212" key="GridCell.Tab.2.center" timestamp="1575480249033">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="188" key="GridCell.Tab.2.center/0.40.1920.1040@0.40.1920.1040" timestamp="1575440488335" />
-    <state width="1596" height="188" key="GridCell.Tab.2.left" timestamp="1575440488335">
+    <state width="1596" height="212" key="GridCell.Tab.2.center/0.40.1920.1040@0.40.1920.1040" timestamp="1575480249033" />
+    <state width="1596" height="212" key="GridCell.Tab.2.left" timestamp="1575480249033">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="188" key="GridCell.Tab.2.left/0.40.1920.1040@0.40.1920.1040" timestamp="1575440488335" />
-    <state width="1596" height="188" key="GridCell.Tab.2.right" timestamp="1575440488335">
+    <state width="1596" height="212" key="GridCell.Tab.2.left/0.40.1920.1040@0.40.1920.1040" timestamp="1575480249033" />
+    <state width="1596" height="212" key="GridCell.Tab.2.right" timestamp="1575480249033">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1596" height="188" key="GridCell.Tab.2.right/0.40.1920.1040@0.40.1920.1040" timestamp="1575440488335" />
-    <state x="-566" y="188" key="SettingsEditor" timestamp="1575215366420">
+    <state width="1596" height="212" key="GridCell.Tab.2.right/0.40.1920.1040@0.40.1920.1040" timestamp="1575480249033" />
+    <state x="345" y="114" key="SettingsEditor" timestamp="1575460592692">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state x="-566" y="188" key="SettingsEditor/0.40.1920.1040@0.40.1920.1040" timestamp="1575215366420" />
+    <state x="345" y="114" key="SettingsEditor/0.40.1920.1040@0.40.1920.1040" timestamp="1575460592692" />
     <state x="452" y="224" key="Vcs.Push.Dialog.v2" timestamp="1575209632157">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>

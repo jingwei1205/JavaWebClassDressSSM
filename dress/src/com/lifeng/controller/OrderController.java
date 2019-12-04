@@ -1,4 +1,6 @@
 package com.lifeng.controller;
+import	java.util.HashMap;
+import	java.util.Map;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -6,12 +8,16 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
+import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.lifeng.entity.Dress;
@@ -105,5 +111,24 @@ public class OrderController{
 		mv.setViewName("pay");
 		return mv;
 	}
-	
+
+	@RequestMapping("/OrderShow")
+	@ResponseBody
+	public Object addDress(HttpServletRequest request, HttpServletResponse response){
+		JSONObject info=new JSONObject();
+		String type =request.getParameter("type");
+		String pageNum =request.getParameter("pagenum");
+		List<Order> order=orderService.findAll();
+//		System.out.println(order.get(0).getReceiverAddress());
+		Map<String, Object> map = new HashMap<String, Object>();
+		if(!order.isEmpty()){
+			map.put("state", "true");
+			map.put("orders", order);
+			map.put("pagenum", "1");
+		}
+		else {
+			map.put("state", "false");
+		}
+		return map;
+	}
 }

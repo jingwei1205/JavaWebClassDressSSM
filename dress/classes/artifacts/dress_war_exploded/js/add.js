@@ -86,8 +86,8 @@ $(function(){
 		var name = Test().name();
 		var price = Test().price();
 		var pnum = Test().pnum();
-		var author = Test().author();
-		if(name && price && pnum && author)
+		// var author = Test().author();
+		if(name && price && pnum)
 			return true;
 		else
 			return false;
@@ -133,15 +133,15 @@ $(function(){
 				return false;
 			}
 		}
-		obj.author = function(){
-			if($("input[name='author']").val().length > 0){
-				$("input[name='author']").next().text("");
-				return true;
-			}else{
-				$("input[name='author']").next().text(" 请输入");
-				return false;
-			}
-		}
+		// obj.author = function(){
+		// 	if($("input[name='author']").val().length > 0){
+		// 		$("input[name='author']").next().text("");
+		// 		return true;
+		// 	}else{
+		// 		$("input[name='author']").next().text(" 请输入");
+		// 		return false;
+		// 	}
+		// }
 		obj.description = function(){
 			if($("input[name='description']").val().length > 0)
 				return true;
@@ -159,4 +159,41 @@ $(function(){
 		}
 		return obj;
 	}
+	$(".max").find(".addBtn").click(function() {
+		if(confirm("确认添加")) {
+			var p = $(".max");
+			var dressname = p.find("input[name='name']").val();
+			var category = p.find("input[name='dressclass']:checked").val();
+			var price = p.find("input[name='price']").val();
+			var num = p.find("input[name='pnum']").val();
+			var description = p.find("input[name='description']").val();
+			alert(category);
+			alert(num);
+			$.ajax({
+				url:"addDress",
+				type:"post",
+				data:{
+					dressname:dressname,
+					category:category,
+					price : price,
+					quantity:num,
+					description : description
+				},
+				dataType :"json",
+				// date:"dressid="+id
+				// 	+"&dressname="+dressname
+				// 	+"&category="+ category
+				// 	+"&price="+ price
+				// 	+"&description="+description,
+				success : function(t) {
+					alert(t.state);
+					if(t.state=="true"){
+						alert("商品添加成功");
+					}else {
+						alert("添加失败");
+					}
+				}
+			})
+		}
+	});
 });

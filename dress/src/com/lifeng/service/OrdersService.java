@@ -17,4 +17,6 @@ public interface OrdersService{
 	
 	//订单id寻找
 	public Order findOrderById(int id);
+	public List<Order> findAll();
+
 }

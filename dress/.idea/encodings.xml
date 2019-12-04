@@ -14,11 +14,13 @@
     <file url="file://$PROJECT_DIR$/src/com/lifeng/dao/DressDao.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/lifeng/dao/OrdersDao.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/lifeng/dao/UserDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/lifeng/entity/Order.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/lifeng/entity/PageBean.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lifeng/entity/User.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lifeng/interceptor/AutoLoginInterceptor.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lifeng/service/CartService.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/lifeng/service/CommentServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/lifeng/service/DressService.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/lifeng/service/DressServiceImpl.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lifeng/service/OrdersService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lifeng/service/UserService.java" charset="UTF-8" />

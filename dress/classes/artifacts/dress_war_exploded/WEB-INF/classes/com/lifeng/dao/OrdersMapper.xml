@@ -19,6 +19,9 @@
    	</insert>
  	<update id="updateOrder" parameterType="Order">
 		UPDATE orders SET paystate=#{paystate} WHERE id= #{id}
-    </update>	
+    </update>
+	<select id="findAll" resultType="Order">
+		select * from orders
+	</select>
  	
 </mapper>
