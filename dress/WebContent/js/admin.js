@@ -240,28 +240,32 @@ $(function(){
 				if (t.state == "true") {
 					$(".ordersAdmin").find("span").text("第" + pagenum + "页/共" + t.pagesum + "页");
 					$(".order").remove();
+                    var arr=t.orders;
 					for (var i = 0; i < t.orders.length; i++) {
+					    //alert(t.orders[i].userid);
+					    // alert(t.orders[i]);
+                        // alert(t.orders[i].getUser().getId());
 						var orderstate;
 						var btntype = "";
-						if (t.orders[i].state == "-1") {
+						if (t.ostate[i] == "-1") {
 							btntype = "<button type='button' class='btn btn-danger btn-sm cancel'>取消</button>"
 							orderstate = "待付款";
-						} else if (t.orders[i].state == "-2") {
+						} else if (t.ostate[i] == "-2") {
 							btntype = "<button type='button' class='btn btn-default btn-sm' disabled='disabled'>不可操作</button>";
 							orderstate = "待付款";
-						} else if (t.orders[i].state == "-3") {
+						} else if (t.ostate[i] == "-3") {
 							btntype = "<button type='button' class='btn btn-default btn-sm' disabled='disabled'>不可操作</button>";
 							orderstate = "待评价";
-						} else if (t.orders[i].state == "-4") {
+						} else if (t.ostate[i] == "-4") {
 							btntype = "<button type='button' class='btn btn-danger btn-sm tytk'>同意退款</button>";
 							orderstate = "退款中";
-						} else if (t.orders[i].state == "1") {
+						} else if (t.ostate[i] == "1") {
 							btntype = "<button type='button' class='btn btn-danger btn-sm delete'>删除</button>";
 							orderstate = "已完成";
-						} else if (t.orders[i].state == "2") {
+						} else if (t.ostate[i] == "2") {
 							btntype = "<button type='button' class='btn btn-danger btn-sm delete'>删除</button>";
 							orderstate = "已取消";
-						} else if (t.orders[i].state == "3") {
+						} else if (t.ostate[i] == "3") {
 							btntype = "<button type='button' class='btn btn-danger btn-sm delete'>删除</button>";
 							orderstate = "已退款";
 						} else {
@@ -270,9 +274,9 @@ $(function(){
 						}
 						var h = "<div class='order row'>"
 							+ "<div class='col-md-2 oid'>" + t.orders[i].id + "</div>"
-							+ "<div class='col-md-2 pro_id'>" + t.orders[i].pro_id + "</div>"
-							+ "<div class='col-md-2 uid'>" + t.orders[i].userid + "</div>"
-							+ "<div class='col-md-2 pnum'>x " + t.orders[i].pnum + "</div>"
+							+ "<div class='col-md-2 pro_id'>" + t.dressid[i] + "</div>"
+							+ "<div class='col-md-2 uid'>" + t.userid[i] + "</div>"
+							+ "<div class='col-md-2 pnum'>x " + t.pnum[i] + "</div>"
 							+ "<div class='col-md-2 logistics'>"
 							+ "<a href='javascript:void(0)'>" + orderstate + "</a>"
 							+ "</div>"

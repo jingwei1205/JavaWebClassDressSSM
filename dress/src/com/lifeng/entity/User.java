@@ -26,10 +26,9 @@ public class User implements Serializable{
 	private String role;
 	private Date registTime;
 	private String shippingAddress;
-
 	private String name;
 	private String headimg;
-	
+
 
 	public int getId() {
 		return id;

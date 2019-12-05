@@ -8,11 +8,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
+import com.lifeng.dao.RegisterDao;
+import com.lifeng.service.RegisterService;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,13 +36,15 @@ import com.lifeng.service.OrdersService;
 
 @Controller
 public class OrderController{
-	
+	@Resource
 	@Autowired
 	private OrdersService orderService;
 	@Autowired
 	private CartService cartService;
 	@Autowired
-	private DressService dressService;		
+	private DressService dressService;
+	@Autowired
+	private RegisterService registerService;
 	
 	public DressService getDressService() {
 		return dressService;
@@ -82,7 +87,9 @@ public class OrderController{
 		order.setReceiverAddress(receiverAddress);
 		order.setReceiverName(user.getUsername());
 		order.setReceiverPhone(telephone);		
-		order.setUser(user);			
+		order.setUser(user);
+		order.setUserid();
+		System.out.println(order.getUserId());
 		order.setOrdertime(new Date());	
 		Dress dress=new Dress();
 		for(Cart cart:list) {
@@ -119,12 +126,31 @@ public class OrderController{
 		String type =request.getParameter("type");
 		String pageNum =request.getParameter("pagenum");
 		List<Order> order=orderService.findAll();
-//		System.out.println(order.get(0).getReceiverAddress());
 		Map<String, Object> map = new HashMap<String, Object>();
+		int userId[]=new int[order.size()];
+		int pnum[]=new int[order.size()];
+		int dressid[]=new int[order.size()];
+		int ostate[]=new int[order.size()];
+		OrderItem orderItem;
+		int j=0;
+		for(int i=0;i<order.size();i++){
+			System.out.println(order.get(i).getUserId());
+			userId[i] =order.get(i).getUserId();
+			System.out.println(order.get(i));
+			orderItem=registerService.selectItem(order.get(i).getId());
+			pnum[i]=orderItem.getBuynum();
+			dressid[i]=orderItem.getDressId();
+			ostate[i]=orderItem.getOS();
+			System.out.println(ostate[i]);
+		}
 		if(!order.isEmpty()){
 			map.put("state", "true");
 			map.put("orders", order);
-			map.put("pagenum", "1");
+			map.put("pagenum", 1);
+			map.put("userid",userId);
+			map.put("pnum",pnum);
+			map.put("dressid",dressid);
+			map.put("ostate",ostate);
 		}
 		else {
 			map.put("state", "false");

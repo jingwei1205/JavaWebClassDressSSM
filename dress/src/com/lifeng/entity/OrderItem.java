@@ -8,6 +8,22 @@ public class OrderItem implements Serializable{
 	private Order order;
 	private Dress dress;
 	private int buynum;
+	private int dressId;
+	private int ostate;
+	public int getDressId(){
+		return  dressId;
+	}
+	public void setDressId(){
+		dressId=dress.getDressid();
+
+	}
+	public int getOS(){
+		return  ostate;
+	}
+	public void setOS(int ostate){
+		this.ostate=ostate;
+
+	}
 	public int getId() {
 		return id;
 	}
@@ -33,6 +49,6 @@ public class OrderItem implements Serializable{
 	public void setBuynum(int buynum) {
 		this.buynum = buynum;
 	}
-	
+
 	
 }

@@ -208,7 +208,7 @@
 									<div class="col-md-2">订单ID</div>
 									<div class="col-md-2">商品ID</div>
 									<div class="col-md-2">用户ID</div>
-									<div class="col-md-2">购买数量</div>
+									<div class="col-md-2">商品数量</div>
 									<div class="col-md-2">状态</div>
 									<div class="col-md-2">操作</div>
 								</div>

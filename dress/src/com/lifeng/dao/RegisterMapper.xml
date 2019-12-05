@@ -6,4 +6,7 @@
 		INSERT INTO user(username, user.password, gender, email, telephone, introduce, shippingAddress, user.name)
 		VALUES (#{username},#{password},#{gender},#{email},#{telephone},#{introduce},#{shippingAddress},#{name})
  	</insert>
+	<select id="selectItem" parameterType="Integer" resultType="com.lifeng.entity.OrderItem">
+		select * from orderitem where orderid=#{orderid}
+	</select>
 </mapper>

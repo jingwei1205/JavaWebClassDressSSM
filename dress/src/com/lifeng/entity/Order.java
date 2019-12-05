@@ -19,6 +19,7 @@ public class Order implements Serializable{
 	private String receiverName;
 	private String receiverPhone;
 	private int paystate;
+	private int userid;
 	private Date ordertime;
 	private User user;
 	private Set<OrderItem> orderitems=new HashSet<OrderItem>();
@@ -37,6 +38,13 @@ public class Order implements Serializable{
 
 	public void setUser(User user) {
 		this.user = user;
+	}
+
+	public void setUserid() {
+		this.userid = user.getId();
+	}
+	public int getUserId(){
+		return userid;
 	}
 
 	public int getId() {

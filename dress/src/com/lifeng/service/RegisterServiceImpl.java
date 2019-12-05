@@ -1,6 +1,7 @@
 package com.lifeng.service;
 
 import com.lifeng.dao.RegisterDao;
+import com.lifeng.entity.OrderItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.lifeng.dao.UserDao;
@@ -48,4 +49,9 @@ public class RegisterServiceImpl implements RegisterService{
 
     @Override
     public int modifyAddress(String shippingAddress,String telephone,String name,String username){return userDao.modifyAddress(shippingAddress,telephone,name,username);}
+
+    @Override
+    public OrderItem selectItem(int orderid){
+        return registerDao.selectItem(orderid);
+    }
 }
