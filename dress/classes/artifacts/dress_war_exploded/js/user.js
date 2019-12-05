@@ -17,7 +17,6 @@ $(function(){
 		var addr = $("input[name='address']").val();
 		var reg = /^[0-9]{6,20}$/;
 		var username=$("#username").text();
-		alert(username);
 		if (city==null)
 			var shippingAddress=province+area+addr;
 		else{var shippingAddress=province+city+area+addr;}
@@ -35,7 +34,6 @@ $(function(){
 				    +"&username="+username,
 				// dataType:"Json",
 				success:function(t){
-					alert(t);
 					if(t.state == "true"){
 						alert("修改成功");
 						$(".ModifyAddressMsg").hide(1000);
@@ -53,7 +51,6 @@ $(function(){
 		}
 
 	});
-
 	//保存修改用户资料按钮
 	$("#save").click(function(){
 		var $page1 = $("#page1");
@@ -130,7 +127,31 @@ $(function(){
 		}
 	});
 
-
+	var username=$("#username").text();
+	$.ajax({
+		url:"orderN",
+		type:"post",
+		data:{
+			type:"orderN",
+			username:username
+		},
+		datatype :"json",
+		success:function (t) {
+			$(".orderNum").text(t+"次");
+		}
+	})
+	$.ajax({
+		url:"orderN",
+		type:"post",
+		data:{
+			type:"cartN",
+			username:username
+		},
+		datatype :"json",
+		success:function (t) {
+			$(".cartNum").text(t+"件");
+		}
+	})
 	// 验证函数
 	function Test(){
 		var obj = new Object();

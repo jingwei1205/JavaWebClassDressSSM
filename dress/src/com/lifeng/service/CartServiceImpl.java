@@ -56,5 +56,10 @@ public class CartServiceImpl implements CartService{
 		cartDao.updateCart(cart);
 		
 	}
+
+	@Override
+	public List<Cart> countCart(int userid){
+		return cartDao.countCart(userid);
+	}
 	
 }

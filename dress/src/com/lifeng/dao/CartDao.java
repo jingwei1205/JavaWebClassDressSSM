@@ -28,5 +28,7 @@ public interface CartDao {
 	// 修改购物车服装数量
 	public void updateCart(Cart cart);
 
+	public List<Cart> countCart(int userid);
+
 
 }

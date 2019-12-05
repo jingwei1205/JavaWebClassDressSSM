@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 
 
 import com.lifeng.dao.RegisterDao;
-import com.lifeng.service.RegisterService;
+import com.lifeng.service.*;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,9 +29,6 @@ import com.lifeng.entity.Cart;
 import com.lifeng.entity.Order;
 import com.lifeng.entity.OrderItem;
 import com.lifeng.entity.User;
-import com.lifeng.service.DressService;
-import com.lifeng.service.CartService;
-import com.lifeng.service.OrdersService;
 
 
 @Controller
@@ -45,6 +42,9 @@ public class OrderController{
 	private DressService dressService;
 	@Autowired
 	private RegisterService registerService;
+	@Autowired
+	private UserService userService;
+
 	
 	public DressService getDressService() {
 		return dressService;
@@ -141,7 +141,7 @@ public class OrderController{
 			pnum[i]=orderItem.getBuynum();
 			dressid[i]=orderItem.getDressId();
 			ostate[i]=orderItem.getOS();
-			System.out.println(ostate[i]);
+			//System.out.println(ostate[i]);
 		}
 		if(!order.isEmpty()){
 			map.put("state", "true");
@@ -156,5 +156,19 @@ public class OrderController{
 			map.put("state", "false");
 		}
 		return map;
+	}
+
+	@RequestMapping("/orderN")
+	@ResponseBody
+	public int orderNumber(HttpServletRequest request, HttpServletResponse response){
+		String type=request.getParameter("type");
+		User user=registerService.lookUserInName(request.getParameter("username"));
+		if("orderN".equals(type)) {
+			List<Order> orders = orderService.findMine(user.getId());
+			return orders.size();
+		}else {
+			List<Cart> carts=cartService.countCart(user.getId());
+			return carts.size();
+		}
 	}
 }

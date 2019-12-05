@@ -22,6 +22,7 @@ public interface OrdersDao{
 	public Order findOrderById(int id);
 
 	public List<Order> findAll();
+	public List<Order> findMine(int userid);
 
 
 	

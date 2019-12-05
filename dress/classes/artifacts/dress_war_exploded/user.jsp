@@ -120,14 +120,14 @@
 							<div class="container">
 								<div class="row buyMsg">
 									<div class="col-sm-4 text-right">订单次数</div>
-									<div class="col-sm-4">${requestScope.ordersnum }次</div>
+									<div class="col-sm-4 orderNum">未读取到信息</div>
 									<div class="col-sm-4">
 										<a href="orders.jsp" class="btn btn-default">
 											<span class="glyphicon glyphicon-list-alt"></span> &nbsp;查看订单
 										</a>
 									</div>
 									<div class="col-sm-4 text-right">购物车</div>
-									<div class="col-sm-4">${requestScope.cartnum }件</div>
+									<div class="col-sm-4 cartNum">未读取到信息</div>
 									<div class="col-sm-4">
 										<a href="findCart" class="btn btn-default">
 											<span class="glyphicon glyphicon-shopping-cart"></span> 查看购物车

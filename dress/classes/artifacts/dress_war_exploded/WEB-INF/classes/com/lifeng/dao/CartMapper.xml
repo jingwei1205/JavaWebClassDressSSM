@@ -46,5 +46,7 @@
  	<update id="updateCart" parameterType="Cart">
 		UPDATE cart SET booknum=#{booknum} WHERE dressid= #{id}
     </update>	
- 	
+ 	<select id="countCart" resultType="Cart">
+		select * from cart where userid=#{userid}
+	</select>
 </mapper>

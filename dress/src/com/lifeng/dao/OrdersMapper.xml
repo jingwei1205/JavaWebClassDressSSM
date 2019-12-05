@@ -23,5 +23,7 @@
 	<select id="findAll" resultType="Order">
 		select * from orders
 	</select>
- 	
+ 	<select id="findMine" resultType="Order">
+		select * from orders where userid=#{userid}
+	</select>
 </mapper>
