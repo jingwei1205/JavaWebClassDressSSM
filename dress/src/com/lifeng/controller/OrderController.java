@@ -45,6 +45,8 @@ public class OrderController{
 	@Autowired
 	private UserService userService;
 
+	private String username;
+
 	
 	public DressService getDressService() {
 		return dressService;
@@ -125,23 +127,34 @@ public class OrderController{
 		JSONObject info=new JSONObject();
 		String type =request.getParameter("type");
 		String pageNum =request.getParameter("pagenum");
+		String whose=request.getParameter("whoseOrder");
 		List<Order> order=orderService.findAll();
 		Map<String, Object> map = new HashMap<String, Object>();
 		int userId[]=new int[order.size()];
 		int pnum[]=new int[order.size()];
 		int dressid[]=new int[order.size()];
 		int ostate[]=new int[order.size()];
+		String dressName[]=new String[order.size()];
+		String dressURL[]=new String[order.size()];
+		double dressPrice[]=new double[order.size()];
+		String username[]=new String[order.size()];
+		Dress dress;
 		OrderItem orderItem;
+		User user;
 		int j=0;
 		for(int i=0;i<order.size();i++){
-			System.out.println(order.get(i).getUserId());
 			userId[i] =order.get(i).getUserId();
-			System.out.println(order.get(i));
+			user=registerService.lookUserInId(userId[i]);
+			username[i]=user.getUsername();
 			orderItem=registerService.selectItem(order.get(i).getId());
 			pnum[i]=orderItem.getBuynum();
+            ostate[i]=orderItem.getOS();
 			dressid[i]=orderItem.getDressId();
-			ostate[i]=orderItem.getOS();
-			//System.out.println(ostate[i]);
+			dress=registerService.selectDress(dressid[i]);
+			dressName[i]=dress.getDressname();
+			dressURL[i]=dress.getImgurl();
+			dressPrice[i]=dress.getPrice();
+			System.out.println(dressName[i]);
 		}
 		if(!order.isEmpty()){
 			map.put("state", "true");
@@ -151,6 +164,9 @@ public class OrderController{
 			map.put("pnum",pnum);
 			map.put("dressid",dressid);
 			map.put("ostate",ostate);
+			map.put("dressName",dressName);
+			map.put("dressPrice",dressPrice);
+			map.put("dressURL",dressURL);
 		}
 		else {
 			map.put("state", "false");
@@ -171,4 +187,59 @@ public class OrderController{
 			return carts.size();
 		}
 	}
+
+    @RequestMapping("/myShow")
+    @ResponseBody
+    public Object myShow(HttpServletRequest request, HttpServletResponse response){
+        JSONObject info=new JSONObject();
+        String type =request.getParameter("type");
+        String pageNum =request.getParameter("pagenum");
+        String whose=request.getParameter("whose");
+        System.out.println(whose);
+        User user=registerService.lookUserInName(this.username);
+        int userN=user.getId();
+        System.out.println(userN);
+        List<Order> order=orderService.findMine(userN);
+
+        Map<String, Object> map = new HashMap<String, Object>();
+        int pnum[]=new int[order.size()];
+        int dressid[]=new int[order.size()];
+        int ostate[]=new int[order.size()];
+        String dressName[]=new String[order.size()];
+        String dressURL[]=new String[order.size()];
+        double dressPrice[]=new double[order.size()];
+        Dress dress;
+        OrderItem orderItem;
+        int j=0;
+        for(int i=0;i<order.size();i++){
+            orderItem=registerService.selectItem(order.get(i).getId());
+            pnum[i]=orderItem.getBuynum();
+            dressid[i]=orderItem.getDressId();
+            dress=registerService.selectDress(dressid[i]);
+            dressName[i]=dress.getDressname();
+            dressURL[i]=dress.getImgurl();
+            dressPrice[i]=dress.getPrice();
+            ostate[i]=orderItem.getOS();
+        }
+        if(!order.isEmpty()){
+            map.put("state", "true");
+            map.put("orders", order);
+            map.put("pnum",pnum);
+            map.put("dressid",dressid);
+            map.put("dressName",dressName);
+            map.put("dressPrice",dressPrice);
+            map.put("dressURL",dressURL);
+            map.put("ostate",ostate);
+        }
+        else {
+            map.put("state", "false");
+        }
+        return map;
+    }
+
+    @RequestMapping("/savename")
+    @ResponseBody
+    public void saveName(HttpServletRequest request, HttpServletResponse response) {
+        this.username = request.getParameter("username");
+    }
 }

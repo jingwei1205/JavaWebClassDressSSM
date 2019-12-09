@@ -14,6 +14,7 @@
 		<script src="js/navbar.js"></script>
 		<link rel="stylesheet" href="css/bill.css" />
 		<script type="text/javascript" src="js/bill.js" ></script>
+		<script type="text/javascript" src="js/order.js" ></script>
 	</head>
 
 	<body>
@@ -25,7 +26,7 @@
 		<!--网站导航-->
 		<div class="container">
 			<div class="row text-right">
-				<a href="index.jsp">书城首页</a>><a href="user.jsp">用户</a>><span>订单管理</span>
+				<a href="index.jsp">商城首页</a>><a href="user.jsp">用户</a>><span>订单管理</span>
 			</div>
 		</div>
 		<!--end网站导航-->
@@ -50,12 +51,12 @@
 
 		
 		<!--订单页面-->
-		<div class="container">
+		<div class="container myorder">
 			<div class="row">
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs">
 						<li class="active">
-							<a href="#page1 " data-toggle="tab">待付款</a>
+							<a href="#page1 " data-toggle="tab">全部订单</a>
 						</li>
 						<li>
 							<a href="#page2" data-toggle="tab">待收货</a>
@@ -70,12 +71,12 @@
 							<a href="#page5" data-toggle="tab">完成账单</a>
 						</li>
 					</ul>
-					<div class="tab-content">
+					<div class="tab-content mytable">
 						<!--待付款-->
 						<div class="tab-pane active" id="page1">
 							<div class="top row text-center">
 								<div class="col-xs-2">缩略图</div>
-								<div class="col-xs-2">书名</div>
+								<div class="col-xs-2">商品名</div>
 								<div class="col-xs-2">单价</div>
 								<div class="col-xs-2">数量</div>
 								<div class="col-xs-2">总价</div>
@@ -113,7 +114,7 @@
 						<div class="tab-pane" id="page2">
 							<div class="top row text-center">
 								<div class="col-xs-2">缩略图</div>
-								<div class="col-xs-2">书名</div>
+								<div class="col-xs-2">商品名</div>
 								<div class="col-xs-2">单价</div>
 								<div class="col-xs-2">数量</div>
 								<div class="col-xs-2">总价</div>
@@ -147,7 +148,7 @@
 						<div class="tab-pane" id="page3">
 							<div class="top row text-center">
 								<div class="col-xs-2">缩略图</div>
-								<div class="col-xs-2">书名</div>
+								<div class="col-xs-2">商品名</div>
 								<div class="col-xs-2">单价</div>
 								<div class="col-xs-2">数量</div>
 								<div class="col-xs-2">总价</div>
@@ -180,7 +181,7 @@
 						<div class="tab-pane" id="page4">
 							<div class="top row text-center">
 								<div class="col-xs-2">缩略图</div>
-								<div class="col-xs-2">书名</div>
+								<div class="col-xs-2">商品名</div>
 								<div class="col-xs-2">单价</div>
 								<div class="col-xs-2">数量</div>
 								<div class="col-xs-2">总价</div>
@@ -213,7 +214,7 @@
 						<div class="tab-pane" id="page5">
 							<div class="top row text-center">
 								<div class="col-xs-2">缩略图</div>
-								<div class="col-xs-1">书名</div>
+								<div class="col-xs-1">商品名</div>
 								<div class="col-xs-2">账单号</div>
 								<div class="col-xs-2">开始日期</div>
 								<div class="col-xs-1">单价</div>

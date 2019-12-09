@@ -24,6 +24,5 @@ public interface OrdersDao{
 	public List<Order> findAll();
 	public List<Order> findMine(int userid);
 
-
 	
 }

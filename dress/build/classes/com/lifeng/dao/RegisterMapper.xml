@@ -9,4 +9,7 @@
 	<select id="selectItem" parameterType="Integer" resultType="com.lifeng.entity.OrderItem">
 		select * from orderitem where orderid=#{orderid}
 	</select>
+	<select id="selectDress" parameterType="Integer" resultType="com.lifeng.entity.Dress">
+		select * from dress where dressid=#{dressid}
+	</select>
 </mapper>

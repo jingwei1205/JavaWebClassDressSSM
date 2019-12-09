@@ -10,11 +10,20 @@ public class OrderItem implements Serializable{
 	private int buynum;
 	private int dressId;
 	private int ostate;
+	private String dressName;
 	public int getDressId(){
 		return  dressId;
 	}
 	public void setDressId(){
 		dressId=dress.getDressid();
+
+	}
+
+	public String getDressName(){
+		return  dressName;
+	}
+	public void setDressName(){
+		dressName=dress.getDressname();
 
 	}
 	public int getOS(){

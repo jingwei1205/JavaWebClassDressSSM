@@ -152,6 +152,17 @@ $(function(){
 			$(".cartNum").text(t+"件");
 		}
 	})
+	$.ajax({
+		url:"savename",
+		type:"post",
+		data:{
+			username:username
+		},
+		datatype :"json",
+		success:function (t) {
+			alert("数据更新成功！");
+		}
+	})
 	// 验证函数
 	function Test(){
 		var obj = new Object();

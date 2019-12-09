@@ -1,6 +1,7 @@
 package com.lifeng.service;
 
 import com.lifeng.dao.RegisterDao;
+import com.lifeng.entity.Dress;
 import com.lifeng.entity.OrderItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -53,5 +54,9 @@ public class RegisterServiceImpl implements RegisterService{
     @Override
     public OrderItem selectItem(int orderid){
         return registerDao.selectItem(orderid);
+    }
+    @Override
+    public Dress selectDress(int dressid){
+        return registerDao.selectDress(dressid);
     }
 }
